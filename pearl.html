@@ -5,6 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pearl: Meaningful Reminders - Cephalopod Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .app-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .app-icon {
+            width: 120px; /* Adjusted from 120px to match typical App Store icon size */
+            height: 120px; /* Adjusted from 120px */
+            border-radius: 22%; /* Standard iOS icon corner radius */
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .app-info h2 {
+            margin-bottom: 5px; /* Reduced margin */
+        }
+        
+        .app-info p { /* Style for the subtitle */
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .app-description {
+             margin-bottom: 0; /* Removed default margin */
+        }
+
+        .app-description p { /* Added margin for description paragraphs */
+             margin-bottom: 15px;
+        }
+        
+        .app-links {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        
+        .app-store-button {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        .privacy-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .app-store-section {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+        
+        .app-details {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 30px;
+        }
+        
+        .detail-card {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .detail-card h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .detail-card ul {
+            padding-left: 20px;
+            list-style: disc; /* Ensure list bullets are visible */
+        }
+        
+        .detail-card li {
+            margin-bottom: 8px; /* Increased spacing */
+        }
+        
+        .content-row {
+            display: flex;
+            gap: 40px; /* Increased gap */
+            margin-bottom: 30px;
+            align-items: flex-start; /* Align items to the top */
+        }
+        
+        .content-row .left-column { /* Renamed from app-description for clarity */
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content-row .right-column { /* Renamed from video-section */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align image to top */
+        }
+
+        .screenshot-container {
+             max-width: 200px; /* Limit screenshot width */
+             border-radius: 10px;
+             overflow: hidden;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+             margin: 0 auto;
+        }
+
+        .app-screenshot {
+            display: block; /* Remove extra space below image */
+            width: 200px;
+            height: 431px; /* Maintain aspect ratio */
+        }
+        
+        @media (max-width: 768px) {
+            .content-row {
+                flex-direction: column;
+                gap: 30px; /* Adjust gap for column layout */
+            }
+            
+            .content-row .right-column {
+                margin-top: 0; /* Removed top margin */
+                 width: 100%; /* Allow image to take full width */
+                 max-width: 400px; /* Limit max width on mobile */
+                 align-self: center; /* Center image container */
+            }
+            .screenshot-container {
+                 width: 80%; /* Adjust width for mobile */
+            }
+             .app-icon {
+                 width: 80px;
+                 height: 80px;
+             }
+             .app-info h2 {
+                 font-size: 24px;
+             }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,13 +173,103 @@
 
     <main>
         <section>
-            <h2>Pearl: Meaningful Reminders</h2>
-            <p>Content for Pearl: Meaningful Reminders app will be added here.</p>
+             <div class="content-row">
+                 <div class="left-column">
+                     <div class="app-description">
+                         <div class="app-header">
+                             <img src="assets/pearl_icon.jpeg" alt="Pearl App Icon" class="app-icon">
+                             <div class="app-info">
+                                 <h2>Pearl: Meaningful Reminders</h2>
+                                 <p>Motivation, Wellness, Affirm</p>
+                             </div>
+                         </div>
+                         <p>Make meaningful reminders that appear at random during time periods of your choosing. Reminders can sync across devices & display images. Add widgets!</p>
+                         <p>Create reminders that mean a lot to you, that bring you joy comfort and rest. You choose the time frame, and a number of reminders that you select will appear randomly during that period. You can even choose an image to go with your notifications, which can sync across devices.</p>
+                         <p>Enjoy a beautiful tong notification sound and your hand-crafted reminder. The background animates subtly, respecting accessibility choices.</p>
+                     </div>
+                      <div class="app-links">
+                             <a href="https://apps.apple.com/us/app/pearl-meaningful-reminders/id1567837432?platform=iphone" class="app-store-button" target="_blank">View on App Store</a>
+                     </div>
+                 </div>
+                 
+                 <div class="right-column">
+                     <div class="screenshot-container">
+                         <img id="carousel-img" src="assets/pearl_1.png" alt="Pearl App Screenshot" class="app-screenshot">
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="app-store-section">
+                 <h3>App Store Details</h3>
+                 <div class="app-details">
+                     <div class="detail-card">
+                         <h4>Features</h4>
+                         <ul>
+                             <li>Create custom meaningful reminders</li>
+                             <li>Reminders appear randomly within chosen timeframes</li>
+                             <li>Sync reminders & images across devices (iPhone, iPad, Mac, Watch, Vision)</li>
+                             <li>Attach images to notifications</li>
+                             <li>Home Screen & Lock Screen Widgets</li>
+                             <li>Apple Watch app with complication</li>
+                             <li>Subtle animated background</li>
+                             <li>Light and Dark Mode support</li>
+                             <li>Customizable notification titles & multiple app icons</li>
+                             <li>Option to disable suggestions & word count</li>
+                             <li>Respects Reduce Motion & Transparency settings</li>
+                         </ul>
+                     </div>
+                     <div class="detail-card">
+                         <h4>Compatibility</h4>
+                         <ul>
+                             <li>iPhone: Requires iOS 17.0 or later</li>
+                             <li>iPad: Requires iPadOS 17.0 or later</li>
+                             <li>Mac: Requires macOS 14.0 or later</li>
+                             <li>Apple Watch: Requires watchOS 10.0 or later</li>
+                             <li>Apple Vision: Requires visionOS 1.0 or later</li>
+                         </ul>
+                         <h4>Information</h4>
+                         <ul>
+                             <li>Seller: Cephalopod Studio LLC</li>
+                             <li>Size: 15 MB</li>
+                             <li>Category: Health & Fitness</li>
+                             <li>Age Rating: 4+</li>
+                             <li>Price: Free (Offers In-App Purchases)</li>
+                          </ul>
+                     </div>
+                 </div>
+             </div>
+             
+             <div id="privacy" class="privacy-section">
+                 <h3>Privacy Focused</h3>
+                 <p>At Cephalopod Studio, your privacy comes first. Pearl: Meaningful Reminders is designed with privacy at its core.</p>
+                 <ul>
+                     <li><strong>No Data Collected:</strong> The developer does not collect any data from this app.</li>
+                     <li><strong>No Third-Party Tracking:</strong> We do not use any third-party trackers or analytics.</li>
+                     <li><strong>Your Data Stays Yours:</strong> Your reminders and settings remain private on your devices or synced via your private iCloud account.</li>
+                 </ul>
+                 <p>You can review the full privacy policy on the App Store or the developer's website.</p>
+             </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Cephalopod Studio. All rights reserved.</p>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [
+        'assets/pearl_1.png',
+        'assets/pearl_2.png',
+        'assets/pearl_3.png',
+        'assets/pearl_4.png'
+      ];
+      let current = 0;
+      const imgElement = document.getElementById('carousel-img');
+      setInterval(() => {
+        current = (current + 1) % images.length;
+        imgElement.src = images[current];
+      }, 3000);
+    });
+    </script>
 </body>
 </html> 
