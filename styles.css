@@ -19,6 +19,11 @@ header {
     border-bottom: 1px solid #f0f0f0;
 }
 
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
