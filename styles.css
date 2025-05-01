@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a.active {
+    color: #000;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.app-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.app-card {
+    width: calc(25% - 23px);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 22%;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.app-card .circular-icon {
+    border-radius: 50%;
+}
+
+.app-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .app-card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 700px) {
+    .app-card {
+        width: calc(50% - 15px);
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    nav li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-card {
+        width: 100%;
+    }
+} 
