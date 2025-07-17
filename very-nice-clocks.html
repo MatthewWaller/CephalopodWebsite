@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Very Nice Clocks - Cephalopod Studio</title>
+    <title>Passage - Cephalopod Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+    <style>
+        /* Styles adapted from Sapling page, with landscape video sizing */
+        .app-header { display: flex; align-items: center; margin-bottom: 30px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 22%; margin-right: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .app-info h2 { margin-bottom: 10px; }
+        .app-description { margin-bottom: 30px; }
+        .app-links { margin-bottom: 30px; margin-top: 30px; }
+        .app-store-button { display: inline-block; background-color: #000; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px; font-weight: 500; }
+        .privacy-section { background-color: #f8f8f8; padding: 20px; border-radius: 10px; margin-top: 30px; margin-bottom: 30px; }
+        .app-store-section { margin-top: 40px; border-top: 1px solid #eee; padding-top: 30px; }
+        .app-details { display: flex; flex-wrap: wrap; margin-top: 20px; gap: 30px; }
+        .detail-card { flex: 1; min-width: 200px; background-color: #f8f8f8; padding: 20px; border-radius: 10px; }
+        .detail-card h4 { margin-bottom: 10px; font-size: 18px; }
+        .detail-card ul { padding-left: 20px; }
+        .detail-card li { margin-bottom: 5px; }
+        .store-cta { text-align: center; margin: 30px 0; }
+        .store-cta .app-store-button { font-size: 18px; padding: 15px 30px; }
+        .video-section { margin: 40px 0; }
+        .content-row { display: flex; gap: 30px; margin-bottom: 30px; }
+        .content-row .app-description { flex: 2; display: flex; flex-direction: column; }
+        .content-row .video-section { flex: 1; display: flex; justify-content: center; margin: 0; }
+        .video-container { width: 530px; height: 300px; border-radius: 10px; overflow: hidden; background-color: #000; margin: 0 auto; }
+        .video-js { width: 100%; height: 100%; }
+        .video-js.vjs-fluid { padding-top: 0; }
+        .video-js .vjs-tech { position: absolute; width: 100%; height: 100%; object-fit: contain; }
+        .vjs-poster { background-size: contain; }
+        .content-row .app-store-section { margin-top: auto; }
+        @media (max-width: 768px) {
+            .content-row { flex-direction: column; }
+            .content-row .video-section { margin-top: 30px; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,16 +54,76 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section>
-            <h2>Very Nice Clocks</h2>
-            <p>Coming soon!</p>
+            <div class="content-row">
+                <div class="app-description">
+                    <div class="app-header">
+                        <img src="assets/veryniceclocks_icon.png" alt="Very Nice Clocks" class="app-icon">
+                        <div class="app-info">
+                            <h2>Very Nice Clocks</h2>
+                            <p>Wonderful clocks for Apple Vision Pro</p>
+                        </div>
+                    </div>
+                    <p>Experience beautiful, animated 3D timepieces for clocks, countdowns, stopwatches, and Pomodoro timers, combining aesthetic appeal with practical function.</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/us/app/very-nice-clocks/id6740150306" class="app-store-button" target="_blank">Download on the App Store</a>
+                    </div>
+                </div>
+                <div class="video-section">
+                    <div class="video-container">
+                        <video id="app-video" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" poster="assets/very-nice-clocks.png" data-setup='{}' autoplay muted>
+                            <source src="https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/69/76/e3/6976e388-de57-40d1-a1c3-daaa2fbf3ab6/P1116749539_default.m3u8" type="application/x-mpegURL">
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="app-store-section">
+                <h3>App Store Details</a></h3>
+                <div class="app-details">
+                    <div class="detail-card">
+                        <h4>Features</h4>
+                        <ul>
+                            <li>Wonderful clocks</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Compatibility</h4>
+                        <ul>
+                            <li>Apple Vision Pro: Requires visionOS 2.0 or later</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="privacy" class="privacy-section">
+                <h3>Privacy Policy</h3>
+                <p>We do not collect any of your data.</p>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Cephalopod Studio. All rights reserved.</p>
     </footer>
+    
+    <!-- Video.js -->
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var player = videojs('app-video', {
+                controls: true,
+                autoplay: true,
+                preload: 'auto',
+                muted: true,
+                responsive: false,
+                fluid: false
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
