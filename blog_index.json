@@ -1,0 +1,226 @@
+[
+  {
+    "title": "Going to the 3rd dimension: one-year anniversary of Passage on the Apple Vision Pro Part 3/3",
+    "date": "2025-02-04",
+    "slug": "going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33",
+    "filename": "going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33.md",
+    "excerpt": "Finally. Passage goes 3D Our app has let you enjoy immersive environments in a few ways: 1. Check out the artist-made 360 images that we\u2019ve licensed. 1. Upload your own 360 image, up to 16k 1.",
+    "image": "../blog_assets/going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33_dd92060b.png"
+  },
+  {
+    "title": "Paying off a headset: one-year anniversary of Passage on the Apple Vision Pro Part 1/3:",
+    "date": "2025-02-04",
+    "slug": "paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13",
+    "filename": "paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13.md",
+    "excerpt": "Let\u2019s say this up front: making apps on the Apple Vision Pro is not a gold rush. I am not retired, nor are the folks I\u2019ve partnered with on this fun journey of making cool apps on a really cool platfo...",
+    "image": "../blog_assets/paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13_f35d572d.png"
+  },
+  {
+    "title": "Redeeming ads: one-year anniversary of Passage on the Apple Vision Pro Part 2/3",
+    "date": "2025-02-04",
+    "slug": "redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23",
+    "filename": "redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23.md",
+    "excerpt": "This was a risky move, but so far, it\u2019s a good one. Our app Passage has a feature where you can create immersive environments in the form of AI-generated, 360 images.",
+    "image": "../blog_assets/redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23_b4aed39e.png"
+  },
+  {
+    "title": "Ads on an Apple Vision Pro app",
+    "date": "2024-10-29",
+    "slug": "ads_on_an_apple_vision_pro_app",
+    "filename": "ads_on_an_apple_vision_pro_app.md",
+    "excerpt": "Wild, free-ranging skepticism. That was my first reaction when someone suggested I put ads in our Vision Pro app, Passage. They had made an ad network on Vision Pro, built from the ground up.",
+    "image": "../blog_assets/ads_on_an_apple_vision_pro_app_043d0c94.jpg"
+  },
+  {
+    "title": "Seeing your Mac in 3rd Party Immersive apps on the Vision Pro",
+    "date": "2024-09-21",
+    "slug": "seeing_your_mac_in_3rd_party_immersive_apps_on_the_vision_pro",
+    "filename": "seeing_your_mac_in_3rd_party_immersive_apps_on_the_vision_pro.md",
+    "excerpt": "A top use of the Vision Pro is to get in the zone and focus on work. It\u2019s for those moments when you have a solid hour or two of uninterrupted time, so you throw on your headphones and hunker down.",
+    "image": null
+  },
+  {
+    "title": "Making the Reader Mode for Ember Glow, my creative fiction writing app",
+    "date": "2024-09-16",
+    "slug": "making_the_reader_mode_for_ember_glow_my_creative_fiction_writing_app",
+    "filename": "making_the_reader_mode_for_ember_glow_my_creative_fiction_writing_app.md",
+    "excerpt": "Good writing requires good reading. I recently launched Ember Glow. I wrote a bit about the app overall here, but there was one challenge that was a bit tricky to solve.",
+    "image": null
+  },
+  {
+    "title": "Announcing the Launch of Ember Glow: a Creative Fiction Writing App",
+    "date": "2024-09-14",
+    "slug": "announcing_the_launch_of_ember_glow_a_creative_fiction_writing_app",
+    "filename": "announcing_the_launch_of_ember_glow_a_creative_fiction_writing_app.md",
+    "excerpt": "This app will not generate groundbreaking art. But you might. The writing tool - which you can get here - helps people write incredible fiction.",
+    "image": "../blog_assets/announcing_the_launch_of_ember_glow_a_creative_fiction_writing_app_c7a22e77.png"
+  },
+  {
+    "title": "Modest Improvements on the TextEditor in SwiftUI",
+    "date": "2024-08-31",
+    "slug": "modest_improvements_on_the_texteditor_in_swiftui",
+    "filename": "modest_improvements_on_the_texteditor_in_swiftui.md",
+    "excerpt": "I\u2019ve made my share of writing apps, and apps for writers. I\u2019ve been a professional writer myself. In development, I\u2019ve dealt plenty with UITextView, back before SwiftUI.",
+    "image": "../blog_assets/modest_improvements_on_the_texteditor_in_swiftui_8dd8f5c3.png"
+  },
+  {
+    "title": "Creating Immersive visionOS Environments with Reality Kit and Skyboxes from Blockade Labs (with a True 3D world surprise)",
+    "date": "2024-06-03",
+    "slug": "creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru",
+    "filename": "creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru.md",
+    "excerpt": "Update: After this post was written, Apple wrote their own example and tutorial to make a skybox and fully 3D environment like the system environments.",
+    "image": "../blog_assets/creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru_7a743703.png"
+  },
+  {
+    "title": "Neural Networks from Scratch: A Gentle-Yet-Thorough Explanation with Swift, SwiftUI &amp; Charts (+ a Surprise at the End)",
+    "date": "2023-03-13",
+    "slug": "neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr",
+    "filename": "neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr.md",
+    "excerpt": "Let\u2019s take a moment to slow down from bullet train speed of neural nets in Stable Diffusion, Midjourney, and Dalle-2 churning out art, and the neural nets from the ChatGPT Bing-ularity.",
+    "image": "../blog_assets/neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr_437fc265.png"
+  },
+  {
+    "title": "Adventures in AI Ethics Part 2: Stable Diffusion v2 and the Curse of Scale",
+    "date": "2022-12-12",
+    "slug": "adventures_in_ai_ethics_part_2_stable_diffusion_v2_and_the_curse_of_scale",
+    "filename": "adventures_in_ai_ethics_part_2_stable_diffusion_v2_and_the_curse_of_scale.md",
+    "excerpt": "I outlined here why I had ethical issues about making an iOS app with Stable Diffusion, the machine learning system that creates images with a text prompt.",
+    "image": null
+  },
+  {
+    "title": "On Creating an On-Device Stable Diffusion App, &amp; Deciding Not to Release It: Adventures in AI Ethics",
+    "date": "2022-11-03",
+    "slug": "on_creating_an_on_device_stable_diffusion_app_amp_deciding_not_to_release_it_adventures_in_ai_ethics",
+    "filename": "on_creating_an_on_device_stable_diffusion_app_amp_deciding_not_to_release_it_adventures_in_ai_ethics.md",
+    "excerpt": "The app was approved in the App Store. It had gotten through app review. I had more than 900 beta testers in the public beta.",
+    "image": null
+  },
+  {
+    "title": "The Secret iOS Database Syncing Option You Didn\u2019t Know About, for iPad on Swift Playgrounds &amp; Beyond",
+    "date": "2022-06-17",
+    "slug": "the_secret_ios_database_syncing_option_you_didnt_know_about_for_ipad_on_swift_playgrounds_amp_beyond",
+    "filename": "the_secret_ios_database_syncing_option_you_didnt_know_about_for_ipad_on_swift_playgrounds_amp_beyond.md",
+    "excerpt": "There is one thing you kind of got to have as an option when you\u2019re making a utility app with generated data: to-dos, recipes, notes, etc.",
+    "image": null
+  },
+  {
+    "title": "How to create in-App Purchases in Apps made on iPad w/ Swift Playgrounds",
+    "date": "2022-04-12",
+    "slug": "how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds",
+    "filename": "how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds.md",
+    "excerpt": "I figured out how to make in-app purchases work when making apps with Swift Playgrounds on iPad, and I wanted to share with you, not only the basics, but also the ability to make the code testable on ...",
+    "image": "../blog_assets/how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds_ad6690b1.png"
+  },
+  {
+    "title": "Lessons from Developing an App on the iPad in Swift Playgrounds from Start to Finish (Including Publishing on the App Store)",
+    "date": "2022-01-05",
+    "slug": "lessons_from_developing_an_app_on_the_ipad_in_swift_playgrounds_from_start_to_finish_including_publi",
+    "filename": "lessons_from_developing_an_app_on_the_ipad_in_swift_playgrounds_from_start_to_finish_including_publi.md",
+    "excerpt": "I didn\u2019t know entirely what I was getting myself into by making an app on the iPad. I went in aware of its limitations and tried to think of a little something I could make for myself that would be us...",
+    "image": null
+  },
+  {
+    "title": "Build an App on iPad with Swift Playgrounds and Core Data",
+    "date": "2021-12-16",
+    "slug": "build_an_app_on_ipad_with_swift_playgrounds_and_core_data",
+    "filename": "build_an_app_on_ipad_with_swift_playgrounds_and_core_data.md",
+    "excerpt": "Happy Swift Playgrounds day! If you haven\u2019t heard, you can now write apps on your iPad. It\u2019s very full featured, but one thing that you might need to do a little extra work on is persistence.",
+    "image": "../blog_assets/build_an_app_on_ipad_with_swift_playgrounds_and_core_data_681b2ba4.jpeg"
+  },
+  {
+    "title": "Introducing Pearl: Wellness Reminders",
+    "date": "2021-06-17",
+    "slug": "introducing_pearl_wellness_reminders",
+    "filename": "introducing_pearl_wellness_reminders.md",
+    "excerpt": "A video showing pearl creation in action. This app started in the middle of the pandemic. I wanted to remember something good. And something true.",
+    "image": null
+  },
+  {
+    "title": "Make your own 3D models: WWDC 2021 Photogrammetry (I am legit surprised it actually worked)",
+    "date": "2021-06-10",
+    "slug": "make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked",
+    "filename": "make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked.md",
+    "excerpt": "Alright, I saw the inclusion of photogrammetry in the developer documentation early on and I was hyped! Photogrammetry is where you take pictures of an object from all kinds of angles and then stitch ...",
+    "image": "../blog_assets/make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked_1747cf8d.png"
+  },
+  {
+    "title": "PDF Capture App Part 7: Summary &amp; Epilogue",
+    "date": "2021-05-16",
+    "slug": "pdf_capture_app_part_7_summary_amp_epilogue",
+    "filename": "pdf_capture_app_part_7_summary_amp_epilogue.md",
+    "excerpt": "Summary We\u2019ve reached the end, and to summarize, here is a little git log. And they\u2019re all written as haiku. Five syllables, then seven syllables, then five syllables. Let\u2019s summarize each one.",
+    "image": "../blog_assets/pdf_capture_app_part_7_summary_amp_epilogue_1d840bce.png"
+  },
+  {
+    "title": "Making a PDF Capture App Part 6: The OCR Endgame",
+    "date": "2021-05-15",
+    "slug": "making_a_pdf_capture_app_part_6_the_ocr_endgame",
+    "filename": "making_a_pdf_capture_app_part_6_the_ocr_endgame.md",
+    "excerpt": "Here it is, the final feature. We\u2019ve already overcome in the native competition with our adding and removal of pages and making the process of capturing a PDF more efficient.",
+    "image": null
+  },
+  {
+    "title": "Refining Accessibility: Lessons Learned",
+    "date": "2021-04-12",
+    "slug": "refining_accessibility_lessons_learned",
+    "filename": "refining_accessibility_lessons_learned.md",
+    "excerpt": "In my post about making a really cool aurora background I had a section on adjusting for accessibility. I\u2019ve since reconsidered what I wrote and wanted to share more about what I\u2019ve learned.",
+    "image": "../blog_assets/refining_accessibility_lessons_learned_5fb35727.png"
+  },
+  {
+    "title": "PDF Capture App Part 5: Defeating the Boss",
+    "date": "2021-04-04",
+    "slug": "pdf_capture_app_part_5_defeating_the_boss",
+    "filename": "pdf_capture_app_part_5_defeating_the_boss.md",
+    "excerpt": "It\u2019s time. I\u2019ve teased this challenger for two blog posts now, and i't\u2019s time to reveal who it is. And it is\u2026 THE FILES APP! Yep, there is a handy button in the Files app that will let you use the sam...",
+    "image": "../blog_assets/pdf_capture_app_part_5_defeating_the_boss_4a393e6d.png"
+  },
+  {
+    "title": "SwiftUI Aurora Background Animation",
+    "date": "2021-03-28",
+    "slug": "swiftui_aurora_background_animation",
+    "filename": "swiftui_aurora_background_animation.md",
+    "excerpt": "Lately I\u2019ve been working on my well-being app Pearl. I\u2019m going through a redesign with the help of my friends Joel and Jillian at Return Technologies! And I was interested in making a beautiful gradie...",
+    "image": "../blog_assets/swiftui_aurora_background_animation_c447ea2f.png"
+  },
+  {
+    "title": "PDF Capture App - Part 4: SwiftUI Pro tip &amp; PDF editing.",
+    "date": "2021-03-22",
+    "slug": "pdf_capture_app_part_4_swiftui_pro_tip_amp_pdf_editing",
+    "filename": "pdf_capture_app_part_4_swiftui_pro_tip_amp_pdf_editing.md",
+    "excerpt": "Alright, we\u2019ve got a nice, useful little app for PDFs so far. Now let\u2019s add some nice features that can put it at parity with what the Notes app can do with PDFs, now that we\u2019ve made capturing the PDF...",
+    "image": "../blog_assets/pdf_capture_app_part_4_swiftui_pro_tip_amp_pdf_editing_90103850.jpeg"
+  },
+  {
+    "title": "Making PDF Capture App - Part 3",
+    "date": "2021-03-16",
+    "slug": "making_pdf_capture_app_part_3",
+    "filename": "making_pdf_capture_app_part_3.md",
+    "excerpt": "Alright, as promised, time to do some fun things. Let\u2019s add the document scanner! First things first. I\u2019m going to create my ScannerView.",
+    "image": "../blog_assets/making_pdf_capture_app_part_3_10201b6d.png"
+  },
+  {
+    "title": "Making a PDF Capture App - Part 2",
+    "date": "2021-03-10",
+    "slug": "making_a_pdf_capture_app_part_2",
+    "filename": "making_a_pdf_capture_app_part_2.md",
+    "excerpt": "Last time, we left off with a cliff hanger. What was wrong with our PDF editing? Answer: our changes didn\u2019t persist. The fileWrapper function that saves the app never got called. Hmmm.",
+    "image": "../blog_assets/making_a_pdf_capture_app_part_2_f5d35a66.png"
+  },
+  {
+    "title": "Making a PDF Capture App - Part 1",
+    "date": "2021-02-28",
+    "slug": "making_a_pdf_capture_app_part_1",
+    "filename": "making_a_pdf_capture_app_part_1.md",
+    "excerpt": "What I want to make is a simple PDF capture app. Lately with tax season, I'm uploading tons of docs, and I think I can offer something new.",
+    "image": "../blog_assets/making_a_pdf_capture_app_part_1_80a3e9a0.jpg"
+  },
+  {
+    "title": "Let\u2019s get started",
+    "date": "2021-01-08",
+    "slug": "lets_get_started",
+    "filename": "lets_get_started.md",
+    "excerpt": "Here we go :)",
+    "image": null
+  }
+]
