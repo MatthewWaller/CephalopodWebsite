@@ -1,9 +1,8 @@
 ---
-title: "Make your own 3D models: WWDC 2021 Photogrammetry (I am legit surprised it actually worked)"
+title: Make your own 3D models: WWDC 2021 Photogrammetry (I am legit surprised it actually worked)
 date: 2021-06-10
-slug: make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked
+slug: wwdc-2021-photogrammetry-make-your-own-3d-models-and-somehow-it-actually-worked
 ---
-
 Alright, I saw the inclusion of photogrammetry in the developer documentation early on and I was hyped! 
 
 Photogrammetry is where you take pictures of an object from all kinds of angles and then stitch them together to make a 3D model.

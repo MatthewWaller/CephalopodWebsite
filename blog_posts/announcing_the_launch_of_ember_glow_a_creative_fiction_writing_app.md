@@ -1,9 +1,8 @@
 ---
-title: "Announcing the Launch of Ember Glow: a Creative Fiction Writing App"
+title: Announcing the Launch of Ember Glow: a Creative Fiction Writing App
 date: 2024-09-14
-slug: announcing_the_launch_of_ember_glow_a_creative_fiction_writing_app
+slug: announcing-the-launch-of-ember-glow-a-creative-fiction-writing-app
 ---
-
 This app will not generate groundbreaking art. But you might.
 
 The writing tool - [which you can get here](https://apps.apple.com/us/app/writing-app-ember-glow/id6584513293) - helps people write incredible fiction. We call it Ember Glow to evoke telling stories around a campfire and represent a kindling of creativity. 

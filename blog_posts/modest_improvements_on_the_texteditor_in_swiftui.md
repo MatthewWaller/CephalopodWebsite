@@ -1,9 +1,8 @@
 ---
-title: "Modest Improvements on the TextEditor in SwiftUI"
+title: Modest Improvements on the TextEditor in SwiftUI
 date: 2024-08-31
-slug: modest_improvements_on_the_texteditor_in_swiftui
+slug: improving-on-texteditor-in-swiftui
 ---
-
 I’ve made my share of writing apps, and apps for writers. I’ve been a professional writer myself. In development, I’ve dealt plenty with UITextView, back before SwiftUI. When TextEditor came out in SwiftUI, I was excited for the possibility of simplifying a ton of text editing code. Alas, even today, if you have to do a lot of heavy lifting, I still recommend working via a wrapper around UITextView and NSTextView. 
 
 TextEditor allows for scrollable, multiline text editing. And you can add styles to the text with simple SwiftUI modifiers. If you want rich text editing though, it doesn’t support NSAttributedString. It doesn’t even support the more recent AttributedString! That’s why, for the main text editor in my app [Ember Glow Writer](https://www.cephalopod.studio/work/ember-glow) we make good use of a solid UITextView and NSTextView wrapper called [RichTextKit](https://github.com/danielsaidi/RichTextKit) that interfaces nicely with SwiftUI. (We have a forked copy to adjust where necessary). 

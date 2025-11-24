@@ -1,9 +1,8 @@
 ---
-title: "Going to the 3rd dimension: one-year anniversary of Passage on the Apple Vision Pro Part 3/3"
+title: Going to the 3rd dimension: one-year anniversary of Passage on the Apple Vision Pro Part 3/3
 date: 2025-02-04
-slug: going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33
+slug: going-to-the-3rd-dimension
 ---
-
 ![](../blog_assets/going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33_dd92060b.png)
   
 

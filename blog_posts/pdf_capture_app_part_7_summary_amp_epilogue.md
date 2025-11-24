@@ -1,9 +1,8 @@
 ---
-title: "PDF Capture App Part 7: Summary &amp; Epilogue"
+title: PDF Capture App Part 7: Summary &amp; Epilogue
 date: 2021-05-16
-slug: pdf_capture_app_part_7_summary_amp_epilogue
+slug: pdf-capture-app-part-7-summary-amp-epilogue
 ---
-
 ## Summary
 
 We’ve reached the end, and to summarize, here is a little git log. And they’re all written as haiku. Five syllables, then seven syllables, then five syllables.

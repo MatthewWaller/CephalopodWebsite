@@ -1,9 +1,8 @@
 ---
-title: "Neural Networks from Scratch: A Gentle-Yet-Thorough Explanation with Swift, SwiftUI &amp; Charts (+ a Surprise at the End)"
+title: Neural Networks from Scratch: A Gentle-Yet-Thorough Explanation with Swift, SwiftUI &amp; Charts (+ a Surprise at the End)
 date: 2023-03-13
-slug: neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr
+slug: a-casual-yet-thorough-amp-hands-on-explanation-of-neural-networks-with-swift-swiftui-and-charts
 ---
-
 Let’s take a moment to slow down from bullet train speed of neural nets in Stable Diffusion, Midjourney, and Dalle-2 churning out art, and the neural nets from the ChatGPT Bing-ularity.
 
 My day job is in fact Fusion Energy Machine Learning Tech Lead. (I have the best job, working with the folks at [sapientai.io](https://sapientai.io))

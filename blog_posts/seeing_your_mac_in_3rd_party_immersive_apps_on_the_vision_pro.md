@@ -1,9 +1,8 @@
 ---
-title: "Seeing your Mac in 3rd Party Immersive apps on the Vision Pro"
+title: Seeing your Mac in 3rd Party Immersive apps on the Vision Pro
 date: 2024-09-21
-slug: seeing_your_mac_in_3rd_party_immersive_apps_on_the_vision_pro
+slug: seeing-your-mac-in-3rd-party-immersive-apps-on-the-vision-pro
 ---
-
 A top use of the Vision Pro is to get in the zone and focus on work. It’s for those moments when you have a solid hour or two of uninterrupted time, so you throw on your headphones and hunker down. Those are the times when I put on the Vision Pro, fire up a nice environment and dive into work.
 
 However, there are only so many environments that Apple has created that work with the Mac Virtual Display, which is the way to get work done that doesn’t involve a web app. So all my Python coding, all my machine learning work and data processing in the day-to-day job, that needs to happen on my Mac (and on Remote Desktop setups on my Mac, for Linux and Windows work).

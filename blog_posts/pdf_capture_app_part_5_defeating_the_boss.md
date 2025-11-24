@@ -1,9 +1,8 @@
 ---
-title: "PDF Capture App Part 5: Defeating the Boss"
+title: PDF Capture App Part 5: Defeating the Boss
 date: 2021-04-04
-slug: pdf_capture_app_part_5_defeating_the_boss
+slug: pdf-capture-app-part-5-defeating-the-boss
 ---
-
 It’s time. I’ve teased this challenger for two blog posts now, and i't’s time to reveal who it is. And it is…
 
 THE FILES APP!

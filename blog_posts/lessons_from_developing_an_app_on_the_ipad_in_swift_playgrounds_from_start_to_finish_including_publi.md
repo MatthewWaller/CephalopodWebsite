@@ -1,9 +1,8 @@
 ---
-title: "Lessons from Developing an App on the iPad in Swift Playgrounds from Start to Finish (Including Publishing on the App Store)"
+title: Lessons from Developing an App on the iPad in Swift Playgrounds from Start to Finish (Including Publishing on the App Store)
 date: 2022-01-05
-slug: lessons_from_developing_an_app_on_the_ipad_in_swift_playgrounds_from_start_to_finish_including_publi
+slug: lessons-from-developing-an-app-on-the-ipad-from-start-to-finish-on-the-app-store
 ---
-
 I didn’t know entirely what I was getting myself into by making an app on the iPad. 
 
 I went in aware of its limitations and tried to think of a little something I could make for myself that would be useful and extremely simple.

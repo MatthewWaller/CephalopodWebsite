@@ -2,7 +2,7 @@
   {
     "title": "Going to the 3rd dimension: one-year anniversary of Passage on the Apple Vision Pro Part 3/3",
     "date": "2025-02-04",
-    "slug": "going-to-the-3rd-dimension-one-year-anniversary-of-passage-on-the-apple-vision-p",
+    "slug": "going-to-the-3rd-dimension",
     "filename": "going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33.md",
     "excerpt": "Finally. Passage goes 3D Our app has let you enjoy immersive environments in a few ways: 1. Check out the artist-made 360 images that we’ve licensed. 1. Upload your own 360 image, up to 16k 1.",
     "image": "../blog_assets/going_to_the_3rd_dimension_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_33_dd92060b.png"
@@ -10,7 +10,7 @@
   {
     "title": "Paying off a headset: one-year anniversary of Passage on the Apple Vision Pro Part 1/3:",
     "date": "2025-02-04",
-    "slug": "paying-off-a-headset-one-year-anniversary-of-passage-on-the-apple-vision-pro-par",
+    "slug": "one-year-anniversary-of-passage-on-the-apple-vision-pro-part-13-paying-off-a-headset",
     "filename": "paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13.md",
     "excerpt": "Let’s say this up front: making apps on the Apple Vision Pro is not a gold rush. I am not retired, nor are the folks I’ve partnered with on this fun journey of making cool apps on a really cool platfo...",
     "image": "../blog_assets/paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13_f35d572d.png"
@@ -18,7 +18,7 @@
   {
     "title": "Redeeming ads: one-year anniversary of Passage on the Apple Vision Pro Part 2/3",
     "date": "2025-02-04",
-    "slug": "redeeming-ads-one-year-anniversary-of-passage-on-the-apple-vision-pro-part-23",
+    "slug": "looking-back-at-using-ads-in-the-apple-vision-pro",
     "filename": "redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23.md",
     "excerpt": "This was a risky move, but so far, it’s a good one. Our app Passage has a feature where you can create immersive environments in the form of AI-generated, 360 images.",
     "image": "../blog_assets/redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23_b4aed39e.png"
@@ -26,7 +26,7 @@
   {
     "title": "Ads on an Apple Vision Pro app",
     "date": "2024-10-29",
-    "slug": "ads-on-an-apple-vision-pro-app",
+    "slug": "embedding-ads-on-a-vision-pro-app",
     "filename": "ads_on_an_apple_vision_pro_app.md",
     "excerpt": "Wild, free-ranging skepticism. That was my first reaction when someone suggested I put ads in our Vision Pro app, Passage. They had made an ad network on Vision Pro, built from the ground up.",
     "image": "../blog_assets/ads_on_an_apple_vision_pro_app_043d0c94.jpg"
@@ -58,7 +58,7 @@
   {
     "title": "Modest Improvements on the TextEditor in SwiftUI",
     "date": "2024-08-31",
-    "slug": "modest-improvements-on-the-texteditor-in-swiftui",
+    "slug": "improving-on-texteditor-in-swiftui",
     "filename": "modest_improvements_on_the_texteditor_in_swiftui.md",
     "excerpt": "I’ve made my share of writing apps, and apps for writers. I’ve been a professional writer myself. In development, I’ve dealt plenty with UITextView, back before SwiftUI.",
     "image": "../blog_assets/modest_improvements_on_the_texteditor_in_swiftui_8dd8f5c3.png"
@@ -66,7 +66,7 @@
   {
     "title": "Creating Immersive visionOS Environments with Reality Kit and Skyboxes from Blockade Labs (with a True 3D world surprise)",
     "date": "2024-06-03",
-    "slug": "creating-immersive-visionos-environments-with-reality-kit-and-skyboxes-from-bloc",
+    "slug": "creating-immersive-visionos-environments-with-reality-kit-and-skyboxes-from-blockade-labs-with-a-true-3d-world-surprise",
     "filename": "creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru.md",
     "excerpt": "Update: After this post was written, Apple wrote their own example and tutorial to make a skybox and fully 3D environment like the system environments.",
     "image": "../blog_assets/creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru_7a743703.png"
@@ -74,7 +74,7 @@
   {
     "title": "Neural Networks from Scratch: A Gentle-Yet-Thorough Explanation with Swift, SwiftUI &amp; Charts (+ a Surprise at the End)",
     "date": "2023-03-13",
-    "slug": "neural-networks-from-scratch-a-gentle-yet-thorough-explanation-with-swift-swiftu",
+    "slug": "a-casual-yet-thorough-amp-hands-on-explanation-of-neural-networks-with-swift-swiftui-and-charts",
     "filename": "neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr.md",
     "excerpt": "Let’s take a moment to slow down from bullet train speed of neural nets in Stable Diffusion, Midjourney, and Dalle-2 churning out art, and the neural nets from the ChatGPT Bing-ularity.",
     "image": "../blog_assets/neural_networks_from_scratch_a_gentle_yet_thorough_explanation_with_swift_swiftui_amp_charts_a_surpr_437fc265.png"
@@ -90,7 +90,7 @@
   {
     "title": "On Creating an On-Device Stable Diffusion App, &amp; Deciding Not to Release It: Adventures in AI Ethics",
     "date": "2022-11-03",
-    "slug": "on-creating-an-on-device-stable-diffusion-app-amp-deciding-not-to-release-it-adv",
+    "slug": "on-creating-an-on-device-stable-diffusion-app-amp-deciding-not-to-release-it-adventures-in-ai-ethics",
     "filename": "on_creating_an_on_device_stable_diffusion_app_amp_deciding_not_to_release_it_adventures_in_ai_ethics.md",
     "excerpt": "The app was approved in the App Store. It had gotten through app review. I had more than 900 beta testers in the public beta.",
     "image": null
@@ -98,7 +98,7 @@
   {
     "title": "The Secret iOS Database Syncing Option You Didn’t Know About, for iPad on Swift Playgrounds &amp; Beyond",
     "date": "2022-06-17",
-    "slug": "the-secret-ios-database-syncing-option-you-didnt-know-about-for-ipad-on-swift-pl",
+    "slug": "the-secret-ios-database-syncing-option-you-didnt-know-about-for-ipad-on-swift-playgrounds-amp-beyond",
     "filename": "the_secret_ios_database_syncing_option_you_didnt_know_about_for_ipad_on_swift_playgrounds_amp_beyond.md",
     "excerpt": "There is one thing you kind of got to have as an option when you’re making a utility app with generated data: to-dos, recipes, notes, etc.",
     "image": null
@@ -106,7 +106,7 @@
   {
     "title": "How to create in-App Purchases in Apps made on iPad w/ Swift Playgrounds",
     "date": "2022-04-12",
-    "slug": "how-to-create-in-app-purchases-in-apps-made-on-ipad-w-swift-playgrounds",
+    "slug": "making-money-by-developing-apps-on-ipads-swift-playgrounds-the-code-part-",
     "filename": "how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds.md",
     "excerpt": "I figured out how to make in-app purchases work when making apps with Swift Playgrounds on iPad, and I wanted to share with you, not only the basics, but also the ability to make the code testable on ...",
     "image": "../blog_assets/how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds_ad6690b1.png"
@@ -114,7 +114,7 @@
   {
     "title": "Lessons from Developing an App on the iPad in Swift Playgrounds from Start to Finish (Including Publishing on the App Store)",
     "date": "2022-01-05",
-    "slug": "lessons-from-developing-an-app-on-the-ipad-in-swift-playgrounds-from-start-to-fi",
+    "slug": "lessons-from-developing-an-app-on-the-ipad-from-start-to-finish-on-the-app-store",
     "filename": "lessons_from_developing_an_app_on_the_ipad_in_swift_playgrounds_from_start_to_finish_including_publi.md",
     "excerpt": "I didn’t know entirely what I was getting myself into by making an app on the iPad. I went in aware of its limitations and tried to think of a little something I could make for myself that would be us...",
     "image": null
@@ -138,7 +138,7 @@
   {
     "title": "Make your own 3D models: WWDC 2021 Photogrammetry (I am legit surprised it actually worked)",
     "date": "2021-06-10",
-    "slug": "make-your-own-3d-models-wwdc-2021-photogrammetry-i-am-legit-surprised-it-actuall",
+    "slug": "wwdc-2021-photogrammetry-make-your-own-3d-models-and-somehow-it-actually-worked",
     "filename": "make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked.md",
     "excerpt": "Alright, I saw the inclusion of photogrammetry in the developer documentation early on and I was hyped! Photogrammetry is where you take pictures of an object from all kinds of angles and then stitch ...",
     "image": "../blog_assets/make_your_own_3d_models_wwdc_2021_photogrammetry_i_am_legit_surprised_it_actually_worked_1747cf8d.png"
@@ -154,7 +154,7 @@
   {
     "title": "Making a PDF Capture App Part 6: The OCR Endgame",
     "date": "2021-05-15",
-    "slug": "making-a-pdf-capture-app-part-6-the-ocr-endgame",
+    "slug": "making-a-pdf-capture-app-part-6-endgame",
     "filename": "making_a_pdf_capture_app_part_6_the_ocr_endgame.md",
     "excerpt": "Here it is, the final feature. We’ve already overcome in the native competition with our adding and removal of pages and making the process of capturing a PDF more efficient.",
     "image": null

@@ -1,9 +1,8 @@
 ---
-title: "Build an App on iPad with Swift Playgrounds and Core Data"
+title: Build an App on iPad with Swift Playgrounds and Core Data
 date: 2021-12-16
-slug: build_an_app_on_ipad_with_swift_playgrounds_and_core_data
+slug: build-an-app-on-ipad-with-swift-playgrounds-and-core-data
 ---
-
 Happy Swift Playgrounds day! If you haven’t heard, you can now [write apps on your iPad](https://developer.apple.com/news/?id=v868vy6e).
 
 It’s very full featured, but one thing that you might need to do a little extra work on is persistence. Can you use CoreData, for instance? The answer, is, mostly, yes.

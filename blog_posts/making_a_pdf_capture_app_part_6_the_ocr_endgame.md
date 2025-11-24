@@ -1,9 +1,8 @@
 ---
-title: "Making a PDF Capture App Part 6: The OCR Endgame"
+title: Making a PDF Capture App Part 6: The OCR Endgame
 date: 2021-05-15
-slug: making_a_pdf_capture_app_part_6_the_ocr_endgame
+slug: making-a-pdf-capture-app-part-6-endgame
 ---
-
 Here it is, the final feature. We’ve already overcome in the native competition with our adding and removal of pages and making the process of capturing a PDF more efficient. Next we add OCR, or optical character recognition, to make our app even more worthwhile for customers, and to add a certain flair and fun.
 
 OCR basically means we recognize text inside the PDF image. Now people won’t only have a digital version of their document; they can do whatever they want with the text!

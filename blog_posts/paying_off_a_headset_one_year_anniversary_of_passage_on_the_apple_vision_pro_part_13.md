@@ -1,9 +1,8 @@
 ---
-title: "Paying off a headset: one-year anniversary of Passage on the Apple Vision Pro Part 1/3:"
+title: Paying off a headset: one-year anniversary of Passage on the Apple Vision Pro Part 1/3:
 date: 2025-02-04
-slug: paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13
+slug: one-year-anniversary-of-passage-on-the-apple-vision-pro-part-13-paying-off-a-headset
 ---
-
 ![ Our most recent version of Passage ](../blog_assets/paying_off_a_headset_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_13_f35d572d.png) 
 
   Let’s say this up front: making apps on the Apple Vision Pro is not a gold rush. I am not retired, nor are the folks I’ve partnered with on this fun journey of making cool apps on a really cool platform.

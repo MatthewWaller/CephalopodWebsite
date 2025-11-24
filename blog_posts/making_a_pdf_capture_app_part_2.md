@@ -1,9 +1,8 @@
 ---
-title: "Making a PDF Capture App - Part 2"
+title: Making a PDF Capture App - Part 2
 date: 2021-03-10
-slug: making_a_pdf_capture_app_part_2
+slug: making-a-pdf-capture-app-part-2
 ---
-
 [Last time](https://www.cephalopod.studio/blog/making-a-pdf-capture-app-part-1), we left off with a cliff hanger. What was wrong with our PDF editing?
 
 Answer: our changes didn’t persist. The fileWrapper function that saves the app never got called. Hmmm.

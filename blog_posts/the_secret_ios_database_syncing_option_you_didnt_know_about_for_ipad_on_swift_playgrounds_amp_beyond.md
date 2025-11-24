@@ -1,9 +1,8 @@
 ---
-title: "The Secret iOS Database Syncing Option You Didn’t Know About, for iPad on Swift Playgrounds &amp; Beyond"
+title: The Secret iOS Database Syncing Option You Didn’t Know About, for iPad on Swift Playgrounds &amp; Beyond
 date: 2022-06-17
-slug: the_secret_ios_database_syncing_option_you_didnt_know_about_for_ipad_on_swift_playgrounds_amp_beyond
+slug: the-secret-ios-database-syncing-option-you-didnt-know-about-for-ipad-on-swift-playgrounds-amp-beyond
 ---
-
 There is one thing you kind of got to have as an option when you’re making a utility app with generated data: to-dos, recipes, notes, etc.
 
 You’ve got to let the person sync their data across all of their devices. iPhone, iPad, Mac; it has got to be everywhere.

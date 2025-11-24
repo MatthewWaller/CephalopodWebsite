@@ -1,9 +1,8 @@
 ---
-title: "How to create in-App Purchases in Apps made on iPad w/ Swift Playgrounds"
+title: How to create in-App Purchases in Apps made on iPad w/ Swift Playgrounds
 date: 2022-04-12
-slug: how_to_create_in_app_purchases_in_apps_made_on_ipad_w_swift_playgrounds
+slug: making-money-by-developing-apps-on-ipads-swift-playgrounds-the-code-part-
 ---
-
 I figured out how to make in-app purchases work when making apps with Swift Playgrounds on iPad, and I wanted to share with you, not only the basics, but also the ability to make the code testable on device.
 
 The reason being, your in-app purchases won’t work at first!

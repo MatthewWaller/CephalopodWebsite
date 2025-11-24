@@ -1,9 +1,8 @@
 ---
-title: "PDF Capture App - Part 4: SwiftUI Pro tip &amp; PDF editing."
+title: PDF Capture App - Part 4: SwiftUI Pro tip &amp; PDF editing.
 date: 2021-03-22
-slug: pdf_capture_app_part_4_swiftui_pro_tip_amp_pdf_editing
+slug: pdf-capture-app-part-4-swiftui-pro-tip-amp-pdf-editing
 ---
-
 Alright, we’ve got a nice, useful little app for PDFs so far. Now let’s add some nice features that can put it at parity with what the Notes app can do with PDFs, now that we’ve made capturing the PDF smoother and more efficient.
 
 You may have seen a screen like this:

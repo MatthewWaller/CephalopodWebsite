@@ -1,9 +1,8 @@
 ---
-title: "Making the Reader Mode for Ember Glow, my creative fiction writing app"
+title: Making the Reader Mode for Ember Glow, my creative fiction writing app
 date: 2024-09-16
-slug: making_the_reader_mode_for_ember_glow_my_creative_fiction_writing_app
+slug: making-the-reader-mode-for-ember-glow-my-creative-fiction-writing-app
 ---
-
 Good writing requires good reading. 
 
 I recently [launched Ember Glow](https://apps.apple.com/us/app/writing-app-ember-glow/id6584513293). I wrote a bit about the app overall [here](https://www.cephalopod.studio/blog/announcing-the-launch-of-ember-glow-a-creative-fiction-writing-app), but there was one challenge that was a bit tricky to solve.

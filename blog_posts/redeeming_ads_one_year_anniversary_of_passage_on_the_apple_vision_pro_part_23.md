@@ -1,9 +1,8 @@
 ---
-title: "Redeeming ads: one-year anniversary of Passage on the Apple Vision Pro Part 2/3"
+title: Redeeming ads: one-year anniversary of Passage on the Apple Vision Pro Part 2/3
 date: 2025-02-04
-slug: redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23
+slug: looking-back-at-using-ads-in-the-apple-vision-pro
 ---
-
 ![ A screenshot of the native, spatial ads you get with AdXR ](../blog_assets/redeeming_ads_one_year_anniversary_of_passage_on_the_apple_vision_pro_part_23_b4aed39e.png) 
 
   This was a risky move, but so far, it’s a good one.

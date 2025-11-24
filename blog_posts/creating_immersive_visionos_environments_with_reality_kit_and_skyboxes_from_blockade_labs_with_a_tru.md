@@ -1,9 +1,8 @@
 ---
-title: "Creating Immersive visionOS Environments with Reality Kit and Skyboxes from Blockade Labs (with a True 3D world surprise)"
+title: Creating Immersive visionOS Environments with Reality Kit and Skyboxes from Blockade Labs (with a True 3D world surprise)
 date: 2024-06-03
-slug: creating_immersive_visionos_environments_with_reality_kit_and_skyboxes_from_blockade_labs_with_a_tru
+slug: creating-immersive-visionos-environments-with-reality-kit-and-skyboxes-from-blockade-labs-with-a-true-3d-world-surprise
 ---
-
 **Update: ***After this post was written, Apple wrote their own example and tutorial to make a skybox and fully 3D environment like the system environments. See it at the end!*
 
 My co-developer Abe and I really loved the idea of using AI to create immersive worlds. It's a vision that eventually led us to the creation of Passage, an app to be immersed in play or productivity in worlds that you create with generative AI. I have enough experience in image generation to roll my own machine learning pipeline, but when we used [the API from Blockade Labs](https://skybox.blockadelabs.com/api-membership), we were hooked. We could focus on the particular experience of delivering the wonder of Passage without a massive investment in cloud architecture and ML resources.

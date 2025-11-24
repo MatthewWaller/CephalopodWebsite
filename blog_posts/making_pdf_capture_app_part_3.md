@@ -1,9 +1,8 @@
 ---
-title: "Making PDF Capture App - Part 3"
+title: Making PDF Capture App - Part 3
 date: 2021-03-16
-slug: making_pdf_capture_app_part_3
+slug: making-pdf-capture-app-part-3
 ---
-
 Alright, as promised, time to do some fun things. Let’s add the document scanner!
 
 First things first. I’m going to create my ScannerView. This is just a VNDocumentCameraViewController wrapped in a UIViewControllerRepresentable, with a completion handler for when the images come back in the delegate, which will be our Coordinator.

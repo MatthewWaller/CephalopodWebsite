@@ -1,9 +1,8 @@
 ---
-title: "Adventures in AI Ethics Part 2: Stable Diffusion v2 and the Curse of Scale"
+title: Adventures in AI Ethics Part 2: Stable Diffusion v2 and the Curse of Scale
 date: 2022-12-12
-slug: adventures_in_ai_ethics_part_2_stable_diffusion_v2_and_the_curse_of_scale
+slug: adventures-in-ai-ethics-part-2-stable-diffusion-v2-and-the-curse-of-scale
 ---
-
 I outlined [here](https://www.cephalopod.studio/blog/on-creating-an-on-device-stable-diffusion-app-amp-deciding-not-to-release-it-adventures-in-ai-ethics) why I had ethical issues about making an iOS app with Stable Diffusion, the machine learning system that creates images with a text prompt.
 
 In the end, I didn’t like that artists were releasing their art online saying, “Hey, you can use this, but not for commercial purposes okay?” 

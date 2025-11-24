@@ -1,9 +1,8 @@
 ---
-title: "Ads on an Apple Vision Pro app"
+title: Ads on an Apple Vision Pro app
 date: 2024-10-29
-slug: ads_on_an_apple_vision_pro_app
+slug: embedding-ads-on-a-vision-pro-app
 ---
-
 ![ An example of a spatial video ad on the AdXR platform. ](../blog_assets/ads_on_an_apple_vision_pro_app_043d0c94.jpg) 
 
   Wild, free-ranging skepticism. That was my first reaction when someone suggested I put ads in our Vision Pro app, [Passage](https://apps.apple.com/us/app/flowriter-writers-retreat/id6470159510).

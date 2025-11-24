@@ -1,9 +1,8 @@
 ---
-title: "SwiftUI Aurora Background Animation"
+title: SwiftUI Aurora Background Animation
 date: 2021-03-28
-slug: swiftui_aurora_background_animation
+slug: swiftui-aurora-background-animation
 ---
-
 Lately I’ve been working on [my well-being app Pearl](https://www.cephalopod.studio/work/pearl). I’m going through a redesign with the help of my friends Joel and Jillian at [Return Technologies](https://return.team)! And I was interested in making a beautiful gradient background. Something using a sort of [aurora design](https://uxdesign.cc/aurora-ui-new-visual-trend-for-2021-c763a7daa7e2).
 
 What we have in SwiftUI are some excellent gradient helpers: Linear, Radial, Conical. They are all really cool! But I was wanting to put something together that is more organic. And Joel and Jillian brought up the point that it could look really nice animated.

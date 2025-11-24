@@ -1,9 +1,8 @@
 ---
-title: "Refining Accessibility: Lessons Learned"
+title: Refining Accessibility: Lessons Learned
 date: 2021-04-12
-slug: refining_accessibility_lessons_learned
+slug: refining-accessibility-lessons-learned
 ---
-
 In my post about [making a really cool aurora background](https://www.cephalopod.studio/blog/swiftui-aurora-background-animation) I had a section on adjusting for accessibility. I’ve since reconsidered what I wrote and wanted to share more about what I’ve learned.
 
 ### Rethinking Our Steps

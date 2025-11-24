@@ -1,9 +1,8 @@
 ---
-title: "Making a PDF Capture App - Part 1"
+title: Making a PDF Capture App - Part 1
 date: 2021-02-28
-slug: making_a_pdf_capture_app_part_1
+slug: making-a-pdf-capture-app-part-1
 ---
-
 What I want to make is a simple PDF capture app. Lately with tax season, I'm uploading tons of docs, and I think I can offer something new.
 
 PDF apps I've tried are often junky & ad-ridden, or they are too nice for me & with expensive subscriptions. I want to hit a sweet spot (or if I'm unlucky, a dead zone), with a single-purchase app that does just enough for a casual user. Like the Notes app’s PDF capture but more direct.

@@ -1,9 +1,8 @@
 ---
-title: "Introducing Pearl: Wellness Reminders"
+title: Introducing Pearl: Wellness Reminders
 date: 2021-06-17
-slug: introducing_pearl_wellness_reminders
+slug: introducing-pearl-wellness-reminders
 ---
-
 A video showing pearl creation in action.
 
   [This app](https://t.co/pUY5TiPUUi?amp=1) started in the middle of the pandemic. I wanted to remember something good. And something true.

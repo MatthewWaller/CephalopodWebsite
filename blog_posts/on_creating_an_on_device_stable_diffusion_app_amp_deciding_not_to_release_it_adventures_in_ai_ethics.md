@@ -1,9 +1,8 @@
 ---
-title: "On Creating an On-Device Stable Diffusion App, &amp; Deciding Not to Release It: Adventures in AI Ethics"
+title: On Creating an On-Device Stable Diffusion App, &amp; Deciding Not to Release It: Adventures in AI Ethics
 date: 2022-11-03
-slug: on_creating_an_on_device_stable_diffusion_app_amp_deciding_not_to_release_it_adventures_in_ai_ethics
+slug: on-creating-an-on-device-stable-diffusion-app-amp-deciding-not-to-release-it-adventures-in-ai-ethics
 ---
-
 The app was approved in the App Store. It had gotten through app review. I had more than 900 beta testers in the public beta. So many [retweets](https://twitter.com/wattmaller1/status/1581284065197445122?s=20&t=ogx50n3wIVNk6o0dZJlFsw) and [likes of my snippets of my work ](https://twitter.com/wattmaller1/status/1573768941096374274?s=20&t=ogx50n3wIVNk6o0dZJlFsw)throughout the development process. This was going to be my biggest side-project app, and I’ve already made apps on the side that generated enough for a 20-hour-a-week job, which I then sold off for work-life balance. This one though, I had the dollar signs in my eyes.
 
 The reason it was interesting was because I figured out how to do a powerful image generation technique - previously only accessible via a cloud server or a beefy laptop - all on a phone. This opened up the chance for me to drastically out-price competitors relying on expensive cloud servers and have much more control over the experience.
