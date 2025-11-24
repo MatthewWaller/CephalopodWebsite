@@ -11,23 +11,28 @@ async function loadBlogPosts() {
             return;
         }
 
-        container.innerHTML = posts.map(post => `
+        container.innerHTML = posts.map(post => {
+            // Fix image path - convert ../blog_assets/ to blog_assets/
+            const imagePath = post.image ? post.image.replace('../blog_assets/', 'blog_assets/') : null;
+
+            return `
             <article class="blog-post-card">
-                ${post.image ? `
-                    <a href="blog_post.html?post=${post.filename}" class="blog-post-image">
-                        <img src="${post.image}" alt="${post.title}" loading="lazy">
+                ${imagePath ? `
+                    <a href="blog/${post.slug}" class="blog-post-image">
+                        <img src="${imagePath}" alt="${post.title}" loading="lazy">
                     </a>
                 ` : ''}
                 <div class="blog-post-text">
                     <div class="blog-post-meta">
                         <time datetime="${post.date}">${formatDate(post.date)}</time>
                     </div>
-                    <h3><a href="blog_post.html?post=${post.filename}">${post.title}</a></h3>
+                    <h3><a href="blog/${post.slug}">${post.title}</a></h3>
                     <p class="blog-excerpt">${post.excerpt}</p>
-                    <a href="blog_post.html?post=${post.filename}" class="read-more">Read more →</a>
+                    <a href="blog/${post.slug}" class="read-more">Read more →</a>
                 </div>
             </article>
-        `).join('');
+        `;
+        }).join('');
 
     } catch (error) {
         console.error('Error loading blog posts:', error);
