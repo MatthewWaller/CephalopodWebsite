@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannot Ignore: Critical Alarms - Cephalopod Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .app-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 22%;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .app-info h2 {
+            margin-bottom: 5px;
+        }
+
+        .app-info p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .app-description {
+             margin-bottom: 0;
+        }
+
+        .app-description p {
+             margin-bottom: 15px;
+        }
+
+        .app-links {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .app-store-button {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        .privacy-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .app-store-section {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .app-details {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .detail-card {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .detail-card h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .detail-card ul {
+            padding-left: 20px;
+            list-style: disc;
+        }
+
+        .detail-card li {
+            margin-bottom: 8px;
+        }
+
+        .content-row {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .content-row .left-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-row .right-column {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .screenshot-container {
+             max-width: 200px;
+             border-radius: 10px;
+             overflow: hidden;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+             margin: 0 auto;
+        }
+
+        .app-screenshot {
+            display: block;
+            width: 200px;
+            height: 431px;
+        }
+
+        @media (max-width: 768px) {
+            .content-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .content-row .right-column {
+                margin-top: 0;
+                 width: 100%;
+                 max-width: 400px;
+                 align-self: center;
+            }
+            .screenshot-container {
+                 width: 80%;
+            }
+             .app-icon {
+                 width: 80px;
+                 height: 80px;
+             }
+             .app-info h2 {
+                 font-size: 24px;
+             }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/octopus.png" alt="Cephalopod Studio Logo" class="logo">
+            <h1><a href="index.html" class="header-link">Cephalopod Studio</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+             <div class="content-row">
+                 <div class="left-column">
+                     <div class="app-description">
+                         <div class="app-header">
+                             <img src="assets/cannotignore_icon.png" alt="Cannot Ignore App Icon" class="app-icon">
+                             <div class="app-info">
+                                 <h2>Cannot Ignore</h2>
+                                 <p>Critical alarms you can't miss</p>
+                             </div>
+                         </div>
+                         <p>Never miss another important moment. Cannot Ignore delivers full-screen alarms designed specifically for those critical, one-time events that demand your full attention.</p>
+                         <p>When your alarm fires, Cannot Ignore takes over your entire screen with unmissable alerts. Import events from Calendar or Reminders with automatic link detection for video conferences, set custom alarm sounds, and access meeting links instantly when alarms fire.</p>
+                         <p>Perfect for crucial meetings, appointments, flight departures, and deadlines you absolutely cannot afford to miss.</p>
+                     </div>
+                      <div class="app-links">
+                             <a href="#" class="app-store-button" target="_blank">Coming Soon to App Store</a>
+                     </div>
+                 </div>
+
+                 <div class="right-column">
+                     <div class="screenshot-container">
+                         <video class="app-screenshot" autoplay loop muted playsinline>
+                             <source src="assets/cannotignore_video.mp4" type="video/mp4">
+                             Your browser does not support the video tag.
+                         </video>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="app-store-section">
+                 <h3>Key Features</h3>
+                 <div class="app-details">
+                     <div class="detail-card">
+                         <h4>Unmissable Alerts</h4>
+                         <ul>
+                             <li>Full-screen alarms that take over your device</li>
+                             <li>Custom audio file support for unique alarm sounds</li>
+                             <li>Real-time alarm status updates with color-coded icons</li>
+                             <li>In-app alarm control and monitoring</li>
+                             <li>Edit existing alarms anytime</li>
+                         </ul>
+                     </div>
+                     <div class="detail-card">
+                         <h4>Smart Integration</h4>
+                         <ul>
+                             <li>Import from Calendar events with automatic link detection</li>
+                             <li>Import from Reminders with automatic link detection</li>
+                             <li>Detects video conference links (Zoom, Meet, Teams)</li>
+                             <li>One-tap access to links when alarms fire</li>
+                             <li>Automatically includes event notes and URLs</li>
+                         </ul>
+                     </div>
+                     <div class="detail-card">
+                         <h4>Perfect For</h4>
+                         <ul>
+                             <li>Job interviews and important meetings</li>
+                             <li>Medical appointments</li>
+                             <li>Flight departures and travel</li>
+                             <li>Deadline submissions</li>
+                             <li>Video conference calls</li>
+                             <li>Time-sensitive commitments</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+
+             <div id="privacy" class="privacy-section">
+                 <h3>Privacy Focused</h3>
+                 <p>At Cephalopod Studio, your privacy comes first. Cannot Ignore is designed with privacy at its core.</p>
+                 <ul>
+                     <li><strong>No Data Collected:</strong> The developer does not collect any data from this app.</li>
+                     <li><strong>No Third-Party Tracking:</strong> We do not use any third-party trackers or analytics.</li>
+                     <li><strong>Your Data Stays Yours:</strong> Your alarms and settings remain private on your devices.</li>
+                     <li><strong>Local Storage Only:</strong> All alarm data is stored locally using iOS AlarmKit.</li>
+                 </ul>
+                 <p>Calendar and Reminders access is used only for the import feature and no data leaves your device.</p>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cephalopod Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
