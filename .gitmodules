@@ -1,0 +1,3 @@
+[submodule "DirectorsCutCLI"]
+	path = DirectorsCutCLI
+	url = https://github.com/MatthewWaller/DirectorsCutCLI.git
