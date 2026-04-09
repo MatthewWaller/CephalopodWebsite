@@ -215,6 +215,21 @@
             color: #d4913a;
         }
 
+        /* Getting Started */
+        .dc-getting-started {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dc-getting-started h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         /* Features */
         .dc-features {
             padding: 80px 20px;
@@ -614,6 +629,41 @@
             </div>
         </section>
 
+        <!-- Example videos — front and center -->
+        <section class="dc-examples">
+            <h3>Made with Sapling footage</h3>
+            <p>Real videos generated from raw <a href="3d-scanner-sapling.html" style="color:#d4913a; text-decoration:none; border-bottom:1px solid rgba(212,145,58,0.3);">Sapling</a> screen recordings with a single command.</p>
+            <div class="dc-video-grid">
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/image_to_3d.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Image-to-3D AI Generation</h4>
+                        <p>Generating 3D models from images using AI, narrated and edited automatically.</p>
+                    </div>
+                </div>
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/multi_object_comparison.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Multi-Object Comparison</h4>
+                        <p>Multiple scanned objects compared in a single narrated video.</p>
+                    </div>
+                </div>
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/getting_started.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Getting Started Tutorial</h4>
+                        <p>An auto-generated how-to tutorial from raw screen recordings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Terminal demo -->
         <section class="dc-terminal-section">
             <div class="dc-terminal">
@@ -660,6 +710,48 @@
                 </div>
             </div>
             <p style="text-align:center; color:#4a5e4a; font-size:13px; margin-top:12px;">Condensed for demonstration</p>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="dc-getting-started">
+            <h3>Get started in 30 seconds</h3>
+            <div class="dc-terminal" style="max-width:650px; margin:0 auto;">
+                <div class="dc-terminal-bar">
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                </div>
+                <div class="dc-terminal-body">
+                    <div class="dc-comment"># Install via Homebrew (macOS Apple Silicon)</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> brew tap MatthewWaller/directorscut</span>
+                    </div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> brew install</span>
+                        <span class="dc-flag"> --cask</span>
+                        <span class="dc-cmd"> directorscut</span>
+                    </div>
+                    <br>
+                    <div class="dc-comment"># Add your Gemini API key</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> directorscut setup</span>
+                    </div>
+                    <br>
+                    <div class="dc-comment"># Make your first video</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> directorscut edit</span>
+                        <span class="dc-flag"> -p</span>
+                        <span class="dc-string"> "30s product demo"</span>
+                        <span class="dc-flag"> -f</span>
+                        <span class="dc-cmd"> ./clips/</span>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center; color:#6a7e6a; font-size:15px; margin-top:20px;">No Python install needed &mdash; everything is bundled. Just Homebrew and a <a href="https://aistudio.google.com/apikey" style="color:#d4913a; text-decoration:none; border-bottom:1px solid rgba(212,145,58,0.3);">free Gemini API key</a>.</p>
         </section>
 
         <!-- Features -->
@@ -727,41 +819,6 @@
             </div>
         </section>
 
-        <!-- Example videos -->
-        <section class="dc-examples">
-            <h3>Made with Director's Cut</h3>
-            <p>Real videos generated from raw footage with a single command.</p>
-            <div class="dc-video-grid">
-                <div class="dc-video-card">
-                    <video controls preload="metadata">
-                        <source src="assets/directorscut_videos/image_to_3d.mp4#t=0.001" type="video/mp4">
-                    </video>
-                    <div class="dc-video-info">
-                        <h4>Image-to-3D AI Generation</h4>
-                        <p>Generating 3D models from images using AI, narrated and edited automatically.</p>
-                    </div>
-                </div>
-                <div class="dc-video-card">
-                    <video controls preload="metadata">
-                        <source src="assets/directorscut_videos/multi_object_comparison.mp4#t=0.001" type="video/mp4">
-                    </video>
-                    <div class="dc-video-info">
-                        <h4>Multi-Object Comparison</h4>
-                        <p>Multiple scanned objects compared in a single narrated video.</p>
-                    </div>
-                </div>
-                <div class="dc-video-card">
-                    <video controls preload="metadata">
-                        <source src="assets/directorscut_videos/getting_started.mp4#t=0.001" type="video/mp4">
-                    </video>
-                    <div class="dc-video-info">
-                        <h4>Getting Started Tutorial</h4>
-                        <p>An auto-generated how-to tutorial from raw screen recordings.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Use cases -->
         <section class="dc-usecases">
             <h3>Built for people who'd rather ship than scrub timelines</h3>
@@ -809,10 +866,10 @@
         <section class="dc-reqs">
             <h3>Requirements</h3>
             <div class="dc-reqs-grid">
-                <div class="dc-req"><strong>Python 3.11+</strong> (3.14 recommended)</div>
-                <div class="dc-req"><strong>FFmpeg</strong> (free, open source)</div>
+                <div class="dc-req"><strong>Mac with Apple Silicon</strong> (M1 / M2 / M3 / M4)</div>
+                <div class="dc-req"><strong>Homebrew</strong> (installs FFmpeg automatically)</div>
                 <div class="dc-req"><strong>Gemini API key</strong> (free tier available)</div>
-                <div class="dc-req"><strong>macOS or Linux</strong></div>
+                <div class="dc-req"><strong>No Python needed</strong> (bundled)</div>
             </div>
         </section>
     </main>
