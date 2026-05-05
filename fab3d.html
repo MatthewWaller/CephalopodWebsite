@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fab3D - Cephalopod Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .app-header { display: flex; align-items: center; margin-bottom: 30px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 22%; margin-right: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .app-info h2 { margin-bottom: 10px; }
+        .app-description { margin-bottom: 30px; }
+        .app-links { margin-bottom: 30px; margin-top: 30px; }
+        .app-store-button { display: inline-block; background-color: #000; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px; font-weight: 500; }
+        .privacy-section { background-color: #f8f8f8; padding: 20px; border-radius: 10px; margin-top: 30px; margin-bottom: 30px; }
+        .app-store-section { margin-top: 40px; border-top: 1px solid #eee; padding-top: 30px; }
+        .app-details { display: flex; flex-wrap: wrap; margin-top: 20px; gap: 30px; }
+        .detail-card { flex: 1; min-width: 200px; background-color: #f8f8f8; padding: 20px; border-radius: 10px; }
+        .detail-card h4 { margin-bottom: 10px; font-size: 18px; }
+        .detail-card ul { padding-left: 20px; }
+        .detail-card li { margin-bottom: 5px; }
+        .screenshot-gallery { display: flex; gap: 16px; overflow-x: auto; padding: 10px 4px 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin-bottom: 30px; }
+        .screenshot-gallery img { flex: 0 0 auto; width: 240px; height: auto; border-radius: 24px; box-shadow: 0 5px 20px rgba(0,0,0,0.12); scroll-snap-align: start; }
+        @media (max-width: 768px) {
+            .screenshot-gallery img { width: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/octopus.png" alt="Cephalopod Studio Logo" class="logo">
+            <h1><a href="index.html" class="header-link">Cephalopod Studio</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="app-description">
+                <div class="app-header">
+                    <img src="assets/fab3d_icon.png" alt="Fab3D" class="app-icon">
+                    <div class="app-info">
+                        <h2>Fab3D</h2>
+                        <p>Your 3D Model Library</p>
+                    </div>
+                </div>
+                <p>Fab3D is the ultimate space for 3D enthusiasts, designers, and creators. Browse, collect, and share stunning 3D models from the Sketchfab community, all in one beautifully designed app.</p>
+                <p>Whether you're a professional 3D artist, hobbyist, or simply appreciate beautiful 3D creations, Fab3D transforms how you discover and interact with 3D content. Your entire 3D model collection, always at your fingertips.</p>
+                <div class="app-links">
+                    <a href="https://apps.apple.com/us/app/fab3d/id6744257284" class="app-store-button" target="_blank">Download on the App Store</a>
+                </div>
+            </div>
+            <div class="screenshot-gallery">
+                <img src="assets/fab3d_01.png" alt="Fab3D screenshot 1">
+                <img src="assets/fab3d_02.png" alt="Fab3D screenshot 2">
+                <img src="assets/fab3d_03.png" alt="Fab3D screenshot 3">
+                <img src="assets/fab3d_04.png" alt="Fab3D screenshot 4">
+                <img src="assets/fab3d_05.png" alt="Fab3D screenshot 5">
+                <img src="assets/fab3d_06.png" alt="Fab3D screenshot 6">
+                <img src="assets/fab3d_07.png" alt="Fab3D screenshot 7">
+                <img src="assets/fab3d_08.png" alt="Fab3D screenshot 8">
+            </div>
+            <div class="app-store-section">
+                <h3>App Store Details</h3>
+                <div class="app-details">
+                    <div class="detail-card">
+                        <h4>Features</h4>
+                        <ul>
+                            <li>Discover thousands of high-quality 3D models from talented creators worldwide</li>
+                            <li>Save favorites to your personal Likes collection</li>
+                            <li>Download models for offline viewing</li>
+                            <li>Upload USDZ, OBJ, STL, and other 3D creations to Sketchfab</li>
+                            <li>Built-in 3D viewer — rotate, zoom, and explore every angle</li>
+                            <li>AR-ready: view models in your real-world environment</li>
+                            <li>Organize and share with friends, colleagues, or clients</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Compatibility</h4>
+                        <ul>
+                            <li>iPhone: Requires iOS 18.6 or later</li>
+                            <li>Mac: Requires macOS 15.6 or later (M1 or later)</li>
+                            <li>Apple Vision: Requires visionOS 2.6 or later</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="privacy" class="privacy-section">
+                <h3>Privacy Policy</h3>
+                <p>We do not collect any of your data.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cephalopod Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
