@@ -1,41 +1,12 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import MemphisShape from "./memphis-shape"
 import { BOOKING_URL } from "@/lib/site"
 
 export default function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return
-
-      const { clientX, clientY } = e
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect()
-
-      const x = (clientX - left) / width
-      const y = (clientY - top) / height
-
-      const shapes = containerRef.current.querySelectorAll(".memphis-shape")
-      shapes.forEach((shape, index) => {
-        const speed = index % 2 === 0 ? 20 : -20
-        const translateX = (x - 0.5) * speed
-        const translateY = (y - 0.5) * speed
-        ;(shape as HTMLElement).style.transform = `translate(${translateX}px, ${translateY}px)`
-      })
-    }
-
-    document.addEventListener("mousemove", handleMouseMove)
-    return () => document.removeEventListener("mousemove", handleMouseMove)
-  }, [])
-
   return (
-    <section
-      ref={containerRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-background"
-    >
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Background Memphis patterns */}
       <div className="absolute inset-0 memphis-dots opacity-5"></div>
 
