@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 import type { Project } from "@/lib/projects"
 
 type AppCardProps = {
@@ -17,7 +18,7 @@ export default function AppCard({ project, index }: AppCardProps) {
       viewport={{ once: true }}
       className="group"
     >
-      <a
+      <Link
         href={project.href}
         className="block bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-transparent transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-lg hover:shadow-primary/20"
       >
@@ -31,7 +32,7 @@ export default function AppCard({ project, index }: AppCardProps) {
         <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-      </a>
+      </Link>
     </motion.div>
   )
 }
