@@ -1,8 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail } from "lucide-react"
+import { Mail, CalendarClock, Sparkles, Smartphone } from "lucide-react"
 import MemphisShape from "@/components/memphis-shape"
+import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/site"
+
+const services = [
+  { icon: Smartphone, color: "text-primary", label: "iPhone, iPad & Mac apps" },
+  { icon: Sparkles, color: "text-accent", label: "Apple Vision Pro experiences" },
+  { icon: CalendarClock, color: "text-secondary", label: "AI features & prototypes" },
+]
 
 export default function ContactPage() {
   return (
@@ -26,26 +33,46 @@ export default function ContactPage() {
           className="max-w-3xl mx-auto text-center mb-12"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Get in <span className="text-primary">Touch</span>
+            Work <span className="text-primary">With Us</span>
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Hello! We're a small studio of developers making software to empower and delight. Questions, feedback,
-            or just want to say hi? We'd love to hear from you.
+          <p className="text-lg md:text-xl text-muted-foreground">
+            We're a small studio that ships — eleven apps and counting. We take on contract work and would love
+            to build yours.
           </p>
         </motion.div>
+
+        <motion.ul
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-12 text-foreground"
+        >
+          {services.map((service) => (
+            <li key={service.label} className="flex items-center gap-2">
+              <service.icon size={20} className={service.color} />
+              {service.label}
+            </li>
+          ))}
+        </motion.ul>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
           <a
-            href="mailto:hello@cephalopod.studio"
+            href={BOOKING_URL}
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
           >
-            <Mail size={22} /> hello@cephalopod.studio
+            <Mail size={22} /> Book Time With Us
           </a>
+          <p className="mt-6 text-muted-foreground">
+            Not a project inquiry? Say hello any time:{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-secondary underline underline-offset-2">
+              {CONTACT_EMAIL}
+            </a>
+          </p>
         </motion.div>
       </div>
     </div>

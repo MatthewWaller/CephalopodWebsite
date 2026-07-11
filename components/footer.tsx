@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Mail } from "lucide-react"
+import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/site"
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -35,15 +36,27 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Work With Us</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Available for contract work — apps, Apple Vision Pro, and AI features.
+            </p>
             <motion.a
-              href="mailto:hello@cephalopod.studio"
+              href={BOOKING_URL}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-primary text-primary-foreground px-5 py-2 rounded-full font-medium hover:bg-primary/90 transition-colors mb-4"
+            >
+              Book Time With Us
+            </motion.a>
+            <br />
+            <motion.a
+              href={`mailto:${CONTACT_EMAIL}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail size={20} />
-              hello@cephalopod.studio
+              {CONTACT_EMAIL}
             </motion.a>
           </div>
 

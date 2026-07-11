@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ArrowLeft, ArrowUpRight, Shield } from "lucide-react"
 import MemphisShape from "@/components/memphis-shape"
 import VideoPlayer from "@/components/video-player"
+import { BOOKING_URL } from "@/lib/site"
 import type { ProjectDetail as ProjectDetailData, ExtraSection } from "@/lib/project-details"
 
 const accentText = ["text-primary", "text-secondary", "text-accent"]
@@ -316,10 +317,11 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
               <StoreButtons project={project} />
             </div>
             <p className="mt-6 text-muted-foreground">
-              Questions?{" "}
-              <Link href="/contact" className="text-secondary hover:underline">
-                Get in touch
-              </Link>
+              Want something like this for your business?{" "}
+              <a href={BOOKING_URL} className="text-secondary underline underline-offset-2">
+                Book time with us
+              </a>{" "}
+              — we build apps on contract.
             </p>
           </div>
         </motion.div>

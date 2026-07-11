@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import MemphisShape from "@/components/memphis-shape"
+import { BOOKING_URL } from "@/lib/site"
 
 export default function AboutPage() {
   return (
@@ -45,6 +46,14 @@ export default function AboutPage() {
           <p>
             We also write about the journey — the launches, the experiments, and the occasional lesson learned the
             hard way — over on the blog.
+          </p>
+          <p>
+            And we're <strong className="text-foreground">available for contract work</strong>: if you want an app,
+            a Vision Pro experience, or an AI feature built by people who ship their own,{" "}
+            <a href={BOOKING_URL} className="text-primary underline underline-offset-2">
+              book time with us
+            </a>
+            .
           </p>
           <div className="pt-4 flex flex-wrap gap-4">
             <Link

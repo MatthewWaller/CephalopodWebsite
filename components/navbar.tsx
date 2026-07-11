@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { BOOKING_URL } from "@/lib/site"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -55,6 +56,12 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            <a
+              href={BOOKING_URL}
+              className="bg-primary text-primary-foreground px-5 py-2 rounded-full font-medium hover:bg-primary/90 transition-colors"
+            >
+              Work With Us
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -92,6 +99,19 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: navLinks.length * 0.1 }}
+                >
+                  <a
+                    href={BOOKING_URL}
+                    className="inline-block bg-primary text-primary-foreground px-5 py-2 rounded-full font-medium hover:bg-primary/90 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Work With Us
+                  </a>
+                </motion.div>
               </nav>
             </div>
           </motion.div>

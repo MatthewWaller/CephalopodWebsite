@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import MemphisShape from "./memphis-shape"
+import { BOOKING_URL } from "@/lib/site"
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -84,12 +85,23 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a
-              href="#projects"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors inline-block"
-            >
-              Explore Our Work
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={BOOKING_URL}
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors inline-block"
+              >
+                Work With Us
+              </a>
+              <a
+                href="#projects"
+                className="border-2 border-secondary text-secondary px-8 py-4 rounded-full text-lg font-medium hover:bg-secondary hover:text-secondary-foreground transition-colors inline-block"
+              >
+                Explore Our Work
+              </a>
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Available for contract work — apps, Apple Vision Pro, and AI features.
+            </p>
           </motion.div>
         </motion.div>
       </div>

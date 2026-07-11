@@ -10,6 +10,7 @@ import AppCard from "@/components/app-card"
 import BlogCard from "@/components/blog-card"
 import type { Project } from "@/lib/projects"
 import type { BlogPostMeta } from "@/lib/blog"
+import { BOOKING_URL } from "@/lib/site"
 
 type HomeClientProps = {
   projects: Project[]
@@ -145,16 +146,25 @@ export default function HomeClient({ projects, posts }: HomeClientProps) {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Want to Say Hi?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Let's Build Your App</h2>
             <p className="text-lg md:text-xl mb-8 text-muted-foreground">
-              We'd love to hear from you — feedback, ideas, or just a friendly hello.
+              We take on contract work: iPhone and iPad apps, Apple Vision Pro experiences, and AI-powered
+              features. Everything you see here, we designed, built, and shipped — we can do the same for you.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
-            >
-              Get in Touch <ArrowRight size={20} />
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={BOOKING_URL}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
+              >
+                Book Time With Us <ArrowRight size={20} />
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-lg font-medium text-secondary hover:text-secondary/80 transition-colors"
+              >
+                Or just say hi <ArrowRight size={20} />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
