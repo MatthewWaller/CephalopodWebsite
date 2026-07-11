@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mlc-ai/web-llm": "0.2.84",
     "framer-motion": "^12.23.0",
     "hls.js": "^1.6.16",
     "lucide-react": "^0.454.0",
@@ -21,10 +22,10 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5",
-    "autoprefixer": "^10.4.20",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5"
   }
 }

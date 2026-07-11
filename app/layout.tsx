@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageBackground from "@/components/page-background"
 import MotionProvider from "@/components/motion-provider"
+import ChatWidget from "@/components/ceph-chat/chat-widget"
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
           <Navbar />
           <main className="relative z-10">{children}</main>
           <Footer />
+          <ChatWidget />
         </MotionProvider>
       </body>
     </html>
