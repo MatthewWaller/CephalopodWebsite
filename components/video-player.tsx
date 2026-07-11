@@ -17,20 +17,23 @@ export default function VideoPlayer({ src, poster, className }: VideoPlayerProps
 
     const isHls = src.split(/[#?]/)[0].endsWith(".m3u8")
     if (!isHls) return // non-HLS sources are set via the src attribute in JSX
-    if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = src
-      return
-    }
 
-    // HLS streams (Apple App Store trailers) need hls.js outside Safari
+    // HLS streams (Apple App Store trailers): prefer hls.js wherever MSE is
+    // available — canPlayType("application/vnd.apple.mpegurl") is unreliable
+    // (Chrome answers "maybe" but then fails with MEDIA_ERR_SRC_NOT_SUPPORTED).
+    // Fall back to native playback only where hls.js can't run (iOS Safari).
     let hls: { destroy: () => void } | undefined
     let cancelled = false
     import("hls.js").then(({ default: Hls }) => {
-      if (cancelled || !Hls.isSupported()) return
-      const instance = new Hls()
-      instance.loadSource(src)
-      instance.attachMedia(video)
-      hls = instance
+      if (cancelled) return
+      if (Hls.isSupported()) {
+        const instance = new Hls()
+        instance.loadSource(src)
+        instance.attachMedia(video)
+        hls = instance
+      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = src
+      }
     })
 
     return () => {

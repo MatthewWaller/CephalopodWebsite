@@ -70,9 +70,6 @@ export default function HeroSection() {
                 Explore Our Work
               </a>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Available for contract work — apps, Apple Vision Pro, and AI features.
-            </p>
           </motion.div>
         </motion.div>
       </div>
