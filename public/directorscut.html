@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director's Cut - AI Video Editing from the Command Line</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Override site defaults for dark theme */
+        .dc-page {
+            background: #0a0f0a;
+            color: #e0e8e0;
+        }
+
+        .dc-page header {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .dc-page header h1,
+        .dc-page header nav a,
+        .dc-page header nav a.active {
+            color: #c0ccc0;
+        }
+        .dc-page header nav a.active::after {
+            background-color: #d4913a;
+        }
+        .dc-page footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #667766;
+        }
+
+        /* Hero */
+        .dc-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+
+        .dc-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,80,50,0.4) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 50% at 80% 80%, rgba(212,145,58,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Circuit pattern overlay */
+        .dc-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image:
+                linear-gradient(rgba(100,200,130,0.5) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100,200,130,0.5) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .dc-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dc-hero-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 22%;
+            box-shadow:
+                0 0 60px rgba(212,145,58,0.3),
+                0 20px 40px rgba(0,0,0,0.4);
+            margin-bottom: 40px;
+            animation: dc-float 6s ease-in-out infinite;
+        }
+
+        @keyframes dc-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .dc-hero h2 {
+            font-size: 56px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .dc-hero h2 span {
+            background: linear-gradient(135deg, #d4913a, #e8b06a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .dc-hero .dc-tagline {
+            font-size: 22px;
+            color: #8a9e8a;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
+        }
+
+        .dc-cta-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .dc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .dc-btn-primary {
+            background: linear-gradient(135deg, #d4913a, #c07a28);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(212,145,58,0.3);
+        }
+        .dc-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212,145,58,0.4);
+        }
+
+        .dc-btn-secondary {
+            background: rgba(255,255,255,0.06);
+            color: #c0ccc0;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .dc-btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Terminal demo */
+        .dc-terminal-section {
+            padding: 0 20px 80px;
+        }
+
+        .dc-terminal {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #111a11;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 1px rgba(100,200,130,0.1),
+                0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        .dc-terminal-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .dc-terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dc-terminal-dot:nth-child(1) { background: #ff5f57; }
+        .dc-terminal-dot:nth-child(2) { background: #febc2e; }
+        .dc-terminal-dot:nth-child(3) { background: #28c840; }
+
+        .dc-terminal-body {
+            padding: 24px;
+            font-family: 'SF Mono', 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .dc-prompt {
+            color: #6cb86c;
+        }
+
+        .dc-cmd {
+            color: #e0e8e0;
+        }
+
+        .dc-flag {
+            color: #d4913a;
+        }
+
+        .dc-string {
+            color: #7ec87e;
+        }
+
+        .dc-comment {
+            color: #4a5e4a;
+        }
+
+        .dc-output {
+            color: #6a7e6a;
+            margin-top: 8px;
+        }
+
+        .dc-output-highlight {
+            color: #d4913a;
+        }
+
+        /* Getting Started */
+        .dc-getting-started {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dc-getting-started h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Features */
+        .dc-features {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dc-features h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .dc-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .dc-feature-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.25s ease;
+        }
+
+        .dc-feature-card:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(212,145,58,0.2);
+            transform: translateY(-4px);
+        }
+
+        .dc-feature-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .dc-feature-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .dc-feature-card p {
+            font-size: 15px;
+            color: #7a8e7a;
+            line-height: 1.6;
+        }
+
+        /* How it works */
+        .dc-how {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dc-how h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .dc-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+        }
+
+        .dc-steps::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 28px;
+            bottom: 28px;
+            width: 2px;
+            z-index: 0;
+        }
+
+        .dc-step {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+
+        .dc-step-num {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(212,145,58,0.12);
+            border: 2px solid rgba(212,145,58,0.3);
+            color: #d4913a;
+            font-size: 22px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .dc-step-text h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .dc-step-text p {
+            color: #7a8e7a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Use cases */
+        .dc-usecases {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dc-usecases h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .dc-usecases > p {
+            text-align: center;
+            color: #6a7e6a;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .dc-usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .dc-usecase {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .dc-usecase h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #d4913a;
+            margin-bottom: 8px;
+        }
+
+        .dc-usecase p {
+            color: #8a9e8a;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* Pricing */
+        .dc-pricing {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .dc-pricing-box {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(212,145,58,0.08), rgba(30,80,50,0.15));
+            border: 1px solid rgba(212,145,58,0.2);
+            border-radius: 20px;
+            padding: 50px 40px;
+        }
+
+        .dc-price {
+            font-size: 64px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .dc-price-sub {
+            font-size: 18px;
+            color: #8a9e8a;
+            margin-bottom: 8px;
+        }
+
+        .dc-price-note {
+            font-size: 14px;
+            color: #5a6e5a;
+            margin-bottom: 30px;
+        }
+
+        .dc-pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .dc-pricing-features li {
+            padding: 10px 0;
+            color: #b0c0b0;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dc-pricing-features li::before {
+            content: '\2713';
+            color: #6cb86c;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Requirements */
+        .dc-reqs {
+            padding: 60px 20px 80px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .dc-reqs h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .dc-reqs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .dc-req {
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 15px;
+            color: #8a9e8a;
+        }
+
+        .dc-req strong {
+            color: #c0ccc0;
+        }
+
+        /* Video examples */
+        .dc-examples {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dc-examples h3 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .dc-examples > p {
+            text-align: center;
+            color: #6a7e6a;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .dc-video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .dc-video-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .dc-video-card:hover {
+            border-color: rgba(212,145,58,0.2);
+            transform: translateY(-4px);
+        }
+
+        .dc-video-card video {
+            width: 100%;
+            display: block;
+            background: #000;
+        }
+
+        .dc-video-card .dc-video-info {
+            padding: 16px 20px;
+        }
+
+        .dc-video-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .dc-video-card p {
+            font-size: 13px;
+            color: #6a7e6a;
+            line-height: 1.4;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dc-hero h2 {
+                font-size: 36px;
+            }
+            .dc-hero .dc-tagline {
+                font-size: 18px;
+            }
+            .dc-feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .dc-usecase-grid {
+                grid-template-columns: 1fr;
+            }
+            .dc-video-grid {
+                grid-template-columns: 1fr;
+            }
+            .dc-terminal-body {
+                font-size: 13px;
+                padding: 16px;
+            }
+            .dc-reqs-grid {
+                grid-template-columns: 1fr;
+            }
+            .dc-price {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dc-hero {
+                padding: 60px 16px 50px;
+            }
+            .dc-hero h2 {
+                font-size: 28px;
+            }
+            .dc-features h3,
+            .dc-how h3,
+            .dc-usecases h3 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body class="dc-page">
+    <header>
+        <div class="logo-container">
+            <img src="assets/octopus.png" alt="Cephalopod Studio Logo" class="logo">
+            <h1><a href="/" class="header-link">Cephalopod Studio</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="dc-hero">
+            <div class="dc-hero-content">
+                <img src="assets/directorscut_icon.png" alt="Director's Cut" class="dc-hero-icon">
+                <h2>Raw footage in.<br><span>Finished video out.</span></h2>
+                <p class="dc-tagline">AI-powered video editing from the command line. One prompt, one command, one finished video with narration and subtitles.</p>
+                <div class="dc-cta-row">
+                    <a href="https://buy.polar.sh/polar_cl_c3DqnSEinyIb7eELj9SzjxDnRfig6TOzfpc6W48Ks04" class="dc-btn dc-btn-primary">Get a License Key &mdash; $29</a>
+                    <a href="https://github.com/MatthewWaller/DirectorsCutCLI" class="dc-btn dc-btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example videos — front and center -->
+        <section class="dc-examples">
+            <h3>Made with Sapling footage</h3>
+            <p>Real videos generated from raw <a href="3d-scanner-sapling.html" style="color:#d4913a; text-decoration:none; border-bottom:1px solid rgba(212,145,58,0.3);">Sapling</a> screen recordings with a single command.</p>
+            <div class="dc-video-grid">
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/image_to_3d.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Image-to-3D AI Generation</h4>
+                        <p>Generating 3D models from images using AI, narrated and edited automatically.</p>
+                    </div>
+                </div>
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/multi_object_comparison.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Multi-Object Comparison</h4>
+                        <p>Multiple scanned objects compared in a single narrated video.</p>
+                    </div>
+                </div>
+                <div class="dc-video-card">
+                    <video controls preload="metadata">
+                        <source src="assets/directorscut_videos/getting_started.mp4#t=0.001" type="video/mp4">
+                    </video>
+                    <div class="dc-video-info">
+                        <h4>Getting Started Tutorial</h4>
+                        <p>An auto-generated how-to tutorial from raw screen recordings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal demo -->
+        <section class="dc-terminal-section">
+            <div class="dc-terminal">
+                <div class="dc-terminal-bar">
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                </div>
+                <div class="dc-terminal-body">
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> directorscut edit</span>
+                        <span class="dc-flag"> \</span>
+                    </div>
+                    <div>
+                        <span class="dc-flag">&nbsp;&nbsp;-p</span>
+                        <span class="dc-string"> "Create a 30-second product demo with upbeat narration"</span>
+                        <span class="dc-flag"> \</span>
+                    </div>
+                    <div>
+                        <span class="dc-flag">&nbsp;&nbsp;-f</span>
+                        <span class="dc-cmd"> ./raw-footage/</span>
+                        <span class="dc-flag"> \</span>
+                    </div>
+                    <div>
+                        <span class="dc-flag">&nbsp;&nbsp;-o</span>
+                        <span class="dc-cmd"> ./product-demo</span>
+                        <span class="dc-flag"> \</span>
+                    </div>
+                    <div>
+                        <span class="dc-flag">&nbsp;&nbsp;--narrate</span>
+                        <span class="dc-flag"> --subtitle</span>
+                    </div>
+                    <div class="dc-output">
+                        <br>
+                        <span class="dc-output-highlight">Analyzing 47 clips...</span> done<br>
+                        <span class="dc-output-highlight">Generating edit decisions...</span> 12 scenes selected<br>
+                        <span class="dc-output-highlight">Writing narration script...</span> 84 words<br>
+                        <span class="dc-output-highlight">Synthesizing voiceover...</span> done<br>
+                        <span class="dc-output-highlight">Rendering timeline...</span> done<br>
+                        <br>
+                        Saved to <span style="color:#7ec87e;">product-demo/product-demo.mp4</span> (0:32)
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center; color:#4a5e4a; font-size:13px; margin-top:12px;">Condensed for demonstration</p>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="dc-getting-started">
+            <h3>Get started in 30 seconds</h3>
+            <div class="dc-terminal" style="max-width:650px; margin:0 auto;">
+                <div class="dc-terminal-bar">
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                    <span class="dc-terminal-dot"></span>
+                </div>
+                <div class="dc-terminal-body">
+                    <div class="dc-comment"># Install via Homebrew (macOS Apple Silicon)</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> brew tap MatthewWaller/directorscut</span>
+                    </div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> brew install</span>
+                        <span class="dc-flag"> --cask</span>
+                        <span class="dc-cmd"> directorscut</span>
+                    </div>
+                    <br>
+                    <div class="dc-comment"># Add your Gemini API key</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> directorscut setup</span>
+                    </div>
+                    <br>
+                    <div class="dc-comment"># Make your first video</div>
+                    <div>
+                        <span class="dc-prompt">$</span>
+                        <span class="dc-cmd"> directorscut edit</span>
+                        <span class="dc-flag"> -p</span>
+                        <span class="dc-string"> "30s product demo"</span>
+                        <span class="dc-flag"> -f</span>
+                        <span class="dc-cmd"> ./clips/</span>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center; color:#6a7e6a; font-size:15px; margin-top:20px;">No Python install needed &mdash; everything is bundled. Just Homebrew and a <a href="https://aistudio.google.com/apikey" style="color:#d4913a; text-decoration:none; border-bottom:1px solid rgba(212,145,58,0.3);">free Gemini API key</a>.</p>
+        </section>
+
+        <!-- Features -->
+        <section class="dc-features">
+            <h3>Everything you need, nothing you don't</h3>
+            <div class="dc-feature-grid">
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#9881;</span>
+                    <h4>Prompt-Driven Editing</h4>
+                    <p>Describe the video you want in plain English. The AI selects clips, sequences them, adds transitions, and renders your timeline.</p>
+                </div>
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#127908;</span>
+                    <h4>AI Narration</h4>
+                    <p>Auto-generated voiceover scripts timed to your video. Use cloud TTS or clone your own voice locally with Chatterbox &mdash; your voice data never leaves your machine.</p>
+                </div>
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#9997;</span>
+                    <h4>Animated Subtitles</h4>
+                    <p>TikTok-style word-by-word subtitles with precise timing. Multiple styles to match your content.</p>
+                </div>
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#128269;</span>
+                    <h4>Transparent Decisions</h4>
+                    <p>Every edit decision is saved as readable, editable JSON. Tweak the timeline by hand and re-render instantly &mdash; no AI call needed.</p>
+                </div>
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#128640;</span>
+                    <h4>Batch Production</h4>
+                    <p>Run the same footage with 10 different prompts to get 10 unique videos. A/B test edits at scale without touching a timeline.</p>
+                </div>
+                <div class="dc-feature-card">
+                    <span class="dc-feature-icon">&#128260;</span>
+                    <h4>NLE Export</h4>
+                    <p>Export rough cuts as OpenTimelineIO for finishing in Premiere Pro, DaVinci Resolve, or Final Cut Pro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="dc-how">
+            <h3>How it works</h3>
+            <div class="dc-steps">
+                <div class="dc-step">
+                    <div class="dc-step-num">1</div>
+                    <div class="dc-step-text">
+                        <h4>Point it at your footage</h4>
+                        <p>Pass a folder of raw clips. Director's Cut detects scenes, transcribes speech, and builds a visual understanding of every shot.</p>
+                    </div>
+                </div>
+                <div class="dc-step">
+                    <div class="dc-step-num">2</div>
+                    <div class="dc-step-text">
+                        <h4>Describe what you want</h4>
+                        <p>Write a prompt: "30-second product demo with narration" or "highlight reel of the best action shots." The AI makes the editorial decisions.</p>
+                    </div>
+                </div>
+                <div class="dc-step">
+                    <div class="dc-step-num">3</div>
+                    <div class="dc-step-text">
+                        <h4>Get a finished video</h4>
+                        <p>Out comes a rendered MP4 with transitions, narration, and subtitles. Publish directly to YouTube or TikTok, or export to your NLE for final polish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use cases -->
+        <section class="dc-usecases">
+            <h3>Built for people who'd rather ship than scrub timelines</h3>
+            <p>3 free video generations to try before you buy.</p>
+            <div class="dc-usecase-grid">
+                <div class="dc-usecase">
+                    <h4>Content Creators</h4>
+                    <p>Batch-produce TikToks, Reels, and Shorts from a single shoot. Run the same footage 10 times with different prompts, pick the best one.</p>
+                </div>
+                <div class="dc-usecase">
+                    <h4>Developers & PMs</h4>
+                    <p>Turn screen recordings into polished product demos. No timeline scrubbing. No drag-and-drop. Just a prompt and an MP4.</p>
+                </div>
+                <div class="dc-usecase">
+                    <h4>Agencies & Marketing</h4>
+                    <p>Generate rough cuts in seconds, then hand off to your editor via OTIO export. A/B test video edits without multiplying production time.</p>
+                </div>
+                <div class="dc-usecase">
+                    <h4>Educators</h4>
+                    <p>Auto-narrate lecture footage, add subtitles for accessibility, and publish directly &mdash; all from one command.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="dc-pricing">
+            <div class="dc-pricing-box">
+                <div class="dc-price">$29</div>
+                <div class="dc-price-sub">One-time purchase. Yours forever.</div>
+                <div class="dc-price-note">No subscription. No per-minute pricing. All future updates included.</div>
+                <ul class="dc-pricing-features">
+                    <li>3 free video generations to try first</li>
+                    <li>Unlimited use after purchase</li>
+                    <li>AI narration & animated subtitles</li>
+                    <li>Local voice cloning (on-device, private)</li>
+                    <li>YouTube & TikTok publishing</li>
+                    <li>OpenTimelineIO export to pro NLEs</li>
+                </ul>
+                <a href="https://buy.polar.sh/polar_cl_c3DqnSEinyIb7eELj9SzjxDnRfig6TOzfpc6W48Ks04" class="dc-btn dc-btn-primary" style="width:100%;justify-content:center;">Get a License Key</a>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="dc-reqs">
+            <h3>Requirements</h3>
+            <div class="dc-reqs-grid">
+                <div class="dc-req"><strong>Mac with Apple Silicon</strong> (M1 / M2 / M3 / M4)</div>
+                <div class="dc-req"><strong>Homebrew</strong> (installs FFmpeg automatically)</div>
+                <div class="dc-req"><strong>Gemini API key</strong> (free tier available)</div>
+                <div class="dc-req"><strong>No Python needed</strong> (bundled)</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cephalopod Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
