@@ -85,11 +85,12 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
             transition={{ duration: 0.6 }}
             className="relative w-40 h-40 md:w-52 md:h-52 mx-auto md:mx-0"
           >
-            <img
-              src={project.icon}
-              alt={`${project.title} icon`}
-              className={`w-full h-full object-cover shadow-xl ${project.circular ? "rounded-full" : "rounded-[22%]"}`}
-            />
+            <div
+              className={`w-full h-full overflow-hidden shadow-xl ${project.circular ? "rounded-full" : "rounded-[22%]"}`}
+            >
+              {/* Slight zoom crops white fringes baked into some icon files */}
+              <img src={project.icon} alt={`${project.title} icon`} className="w-full h-full scale-[1.04] object-cover" />
+            </div>
             {/* Decorative offset shapes, echoing the template's About page */}
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rounded-lg -z-10"></div>
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-lg -z-10"></div>

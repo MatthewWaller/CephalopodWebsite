@@ -38,17 +38,17 @@ export default function HeroSection() {
       {/* Background Memphis patterns */}
       <div className="absolute inset-0 memphis-dots opacity-5"></div>
 
-      {/* Animated Memphis shapes */}
-      <div className="absolute top-[15%] -left-16 w-48 h-48 memphis-shape">
+      {/* Animated Memphis shapes — hidden on small screens where they collide with the headline */}
+      <div className="hidden md:block absolute top-[15%] -left-16 w-48 h-48 memphis-shape">
         <MemphisShape type="circle" color="bg-primary" />
       </div>
-      <div className="absolute -bottom-20 -right-20 w-56 h-56 memphis-shape">
+      <div className="absolute -bottom-24 -right-24 w-40 h-40 md:-bottom-20 md:-right-20 md:w-56 md:h-56 memphis-shape">
         <MemphisShape type="triangle" color="bg-secondary" />
       </div>
-      <div className="absolute top-1/4 -right-12 w-36 h-36 memphis-shape">
+      <div className="hidden md:block absolute top-1/4 -right-12 w-36 h-36 memphis-shape">
         <MemphisShape type="zigzag" color="bg-accent" />
       </div>
-      <div className="absolute -bottom-16 left-[15%] w-48 h-48 memphis-shape">
+      <div className="hidden md:block absolute -bottom-16 left-[15%] w-48 h-48 memphis-shape">
         <MemphisShape type="squiggle" color="bg-foreground" />
       </div>
 
