@@ -1,5 +1,5 @@
 import HomeClient from "@/components/home-client"
-import { projects } from "@/lib/projects"
+import { featuredProjects } from "@/lib/projects"
 import { getAllPosts, formatDate } from "@/lib/blog"
 
 export default function Home() {
@@ -7,5 +7,5 @@ export default function Home() {
     .slice(0, 3)
     .map((post) => ({ ...post, formattedDate: formatDate(post.date) }))
 
-  return <HomeClient projects={projects} posts={posts} />
+  return <HomeClient projects={featuredProjects} posts={posts} />
 }

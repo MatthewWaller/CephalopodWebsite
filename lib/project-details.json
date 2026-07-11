@@ -1,10 +1,10 @@
 [
   {
     "slug": "3d-scanner-sapling",
-    "title": "3D Scanner: Sapling",
+    "title": "Sapling 3D Scanner",
     "icon": "/assets/sapling_icon.png",
     "circular": false,
-    "tagline": "Photogrammetry & LiDAR scanning for iOS, macOS, and Apple Vision Pro",
+    "tagline": "Easy, fast model capture — LiDAR and 360 scanning on iPhone and iPad.",
     "description": [
       "Make 3D models for augmented reality, 3D printing, game development, or simply sharing with friends.",
       "It performs photogrammetry on images with LIDAR enabled scanning, or you can use AI generate objects from text. Export in a variety of 3D quality, including high-end textures. All photogrammetry processing happens on your device!"
@@ -190,7 +190,11 @@
           "Image-to-3D AI Generation — Generating 3D models from images using AI, narrated and edited automatically.",
           "Multi-Object Comparison — Multiple scanned objects compared in a single narrated video.",
           "Getting Started Tutorial — An auto-generated how-to tutorial from raw screen recordings."
-        ]
+        ],
+        "cta": {
+          "label": "Check out Sapling",
+          "href": "/projects/3d-scanner-sapling"
+        }
       },
       {
         "heading": "Terminal demo",
@@ -324,7 +328,7 @@
   },
   {
     "slug": "journal-diary-rambler",
-    "title": "Journal Diary Rambler",
+    "title": "Rambler: Voice Journal & Diary",
     "icon": "/assets/rambler_icon.png",
     "circular": false,
     "tagline": "Hands-free journaling for iOS 26",
@@ -409,7 +413,7 @@
     "description": [
       "Write works of fiction with the help of Candlelight. This app aims to respect both writers who just want to write, with no bells and whistles, but also creatives who want to explore and tinker with what AI can do."
     ],
-    "appStoreUrl": "#",
+    "appStoreUrl": "https://apps.apple.com/us/app/novel-writing-candlelight/id6584513293",
     "videos": [
       {
         "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/84/0d/d7/840dd7f6-1317-a2d8-f71b-b4cfc83924d0/P953487917_default.m3u8",
@@ -515,7 +519,6 @@
       "Create reminders that mean a lot to you, that bring you joy comfort and rest. You choose the time frame, and a number of reminders that you select will appear randomly during that period. You can even choose an image to go with your notifications, which can sync across devices.",
       "Enjoy a beautiful tong notification sound and your hand-crafted reminder. The background animates subtly, respecting accessibility choices."
     ],
-    "appStoreUrl": "https://apps.apple.com/us/app/pearl-meaningful-reminders/id1567837432?platform=iphone",
     "screenshots": [
       "/assets/pearl_1.png",
       "/assets/pearl_2.png",
@@ -537,7 +540,8 @@
           "Light and Dark Mode support",
           "Customizable notification titles & multiple app icons",
           "Option to disable suggestions & word count",
-          "Respects Reduce Motion & Transparency settings"
+          "Respects Reduce Motion & Transparency settings",
+          "Private, on-device AI Pearl generation for supported devices"
         ]
       },
       {
@@ -558,6 +562,12 @@
       "No Third-Party Tracking: We do not use any third-party trackers or analytics.",
       "Your Data Stays Yours: Your reminders and settings remain private on your devices or synced via your private iCloud account.",
       "You can review the full privacy policy on the App Store or the developer's website."
+    ],
+    "storeLinks": [
+      {
+        "label": "View on App Store",
+        "url": "https://apps.apple.com/us/app/pearl-meaningful-reminders/id1567837432?platform=iphone"
+      }
     ]
   },
   {
@@ -617,13 +627,13 @@
     "tagline": "Fun with to-dos & task lists",
     "description": [
       "A to-do list filled with things to NOT do! Have fun with playful effects & feel productive, and, of course, add actual things to do onto the list for your real tasks!",
-      "Add random, pre-made tasks to your daily to-do list, specifically of things to NOT do, so that you can scratch them off and immediately feel productive while having fun. Get cool check-off effects, like setting your tasks on fire or see them bounce around. All of your tasks can sync to all of your devices via a shared ToDon't list in the Reminders app. The app has dozens and dozens of things to not do! And you can celebrate your accomplishments with random celebrations when you check off all your items!"
+      "Add random, pre-made tasks to your daily to-do list, specifically of things to NOT do, so that you can scratch them off and immediately feel productive while having fun. Get cool check-off effects, like setting your tasks on fire or see them bounce around. All of your tasks can sync to all of your devices via a shared ToDon't list in the Reminders app. The app has dozens and dozens of things to not do! And you can celebrate your accomplishments with random celebrations when you check off all your items!",
+      "ToDon't is not currently available on the App Store."
     ],
-    "appStoreUrl": "https://apps.apple.com/us/app/todont/id1601697790?platform=iphone",
     "videos": [
       {
         "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo122/v4/12/f9/e9/12f9e93d-58ad-3d23-3adb-e92f94ce2cff/P494590490_default.m3u8",
-        "poster": "/assets/todont_icon.png"
+        "poster": "/assets/todont_icon.jpeg"
       }
     ],
     "featuresHeading": "App Store Details",
@@ -668,7 +678,7 @@
     "videos": [
       {
         "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/69/76/e3/6976e388-de57-40d1-a1c3-daaa2fbf3ab6/P1116749539_default.m3u8",
-        "poster": "/assets/very-nice-clocks.png"
+        "poster": "/assets/veryniceclocks_icon.png"
       }
     ],
     "featuresHeading": "App Store Details",

@@ -16,7 +16,8 @@ export default function VideoPlayer({ src, poster, className }: VideoPlayerProps
     if (!video) return
 
     const isHls = src.split(/[#?]/)[0].endsWith(".m3u8")
-    if (!isHls || video.canPlayType("application/vnd.apple.mpegurl")) {
+    if (!isHls) return // non-HLS sources are set via the src attribute in JSX
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = src
       return
     }
@@ -38,12 +39,15 @@ export default function VideoPlayer({ src, poster, className }: VideoPlayerProps
     }
   }, [src])
 
+  const isHls = src.split(/[#?]/)[0].endsWith(".m3u8")
+
   return (
     <video
       ref={ref}
       controls
       playsInline
       preload="metadata"
+      src={isHls ? undefined : src}
       poster={poster ?? undefined}
       className={className ?? "w-full max-h-[70vh] rounded-lg"}
     />

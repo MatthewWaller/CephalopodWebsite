@@ -61,12 +61,12 @@ export default function MemphisShape({ type, color }: ShapeProps) {
                 fill="none"
                 stroke={
                   color === "bg-primary"
-                    ? "hsl(339, 100%, 70%)"
+                    ? "hsl(322, 100%, 60%)"
                     : color === "bg-secondary"
-                      ? "hsl(174, 65%, 55%)"
+                      ? "hsl(187, 100%, 42%)"
                       : color === "bg-accent"
-                        ? "hsl(47, 100%, 71%)"
-                        : "#000"
+                        ? "hsl(47, 100%, 50%)"
+                        : "hsl(0, 0%, 98%)"
                 }
                 strokeWidth="8"
                 strokeLinecap="round"

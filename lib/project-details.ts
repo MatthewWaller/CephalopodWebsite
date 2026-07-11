@@ -8,6 +8,7 @@ export type ExtraSection = {
   heading: string
   paragraphs?: string[]
   items?: string[]
+  cta?: { label: string; href: string }
 }
 
 export type ProjectDetail = {

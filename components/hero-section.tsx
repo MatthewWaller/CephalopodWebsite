@@ -39,7 +39,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 memphis-dots opacity-5"></div>
 
       {/* Animated Memphis shapes */}
-      <div className="absolute top-1/6 -left-16 w-48 h-48 memphis-shape">
+      <div className="absolute top-[15%] -left-16 w-48 h-48 memphis-shape">
         <MemphisShape type="circle" color="bg-primary" />
       </div>
       <div className="absolute -bottom-20 -right-20 w-56 h-56 memphis-shape">
@@ -48,7 +48,7 @@ export default function HeroSection() {
       <div className="absolute top-1/4 -right-12 w-36 h-36 memphis-shape">
         <MemphisShape type="zigzag" color="bg-accent" />
       </div>
-      <div className="absolute -bottom-16 left-1/6 w-48 h-48 memphis-shape">
+      <div className="absolute -bottom-16 left-[15%] w-48 h-48 memphis-shape">
         <MemphisShape type="squiggle" color="bg-foreground" />
       </div>
 

@@ -14,6 +14,20 @@ function isTerminalSection(section: ExtraSection): boolean {
   return (section.items ?? []).some((item) => item.startsWith("$ "))
 }
 
+// Render bare URLs in copy as real links
+function linkify(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s)]+)/g)
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2">
+        {part}
+      </a>
+    ) : (
+      part
+    )
+  )
+}
+
 function StoreButtons({ project }: { project: ProjectDetailData }) {
   const links = project.storeLinks ?? (project.appStoreUrl ? [{ label: "Download on the App Store", url: project.appStoreUrl }] : [])
   if (links.length === 0) return null
@@ -144,7 +158,7 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-8 text-center"
             >
-              Screen<span className="text-secondary">shots</span>
+              <span className="text-secondary">Screenshots</span>
             </motion.h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {project.screenshots.map((shot, i) => (
@@ -181,7 +195,9 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
                 <span className="text-accent">{project.featuresHeading}</span>
               </motion.h2>
             )}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              className={`grid gap-6 md:grid-cols-2 ${project.features.length >= 3 ? "lg:grid-cols-3" : ""}`}
+            >
               {project.features.map((feature, i) => (
                 <motion.div
                   key={feature.heading}
@@ -225,7 +241,7 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
             {section.paragraphs && (
               <div className="space-y-4 text-lg text-muted-foreground mb-6">
                 {section.paragraphs.map((paragraph, j) => (
-                  <p key={j}>{paragraph}</p>
+                  <p key={j}>{linkify(paragraph)}</p>
                 ))}
               </div>
             )}
@@ -251,6 +267,14 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
                   ))}
                 </ul>
               ))}
+            {section.cta && (
+              <Link
+                href={section.cta.href}
+                className="mt-6 inline-flex items-center gap-2 text-lg font-medium text-secondary hover:text-secondary/80 transition-colors"
+              >
+                {section.cta.label} <ArrowUpRight size={18} />
+              </Link>
+            )}
           </motion.section>
         ))}
 

@@ -11,7 +11,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 322 100% 60%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
     --secondary: 187 100% 42%;
     --secondary-foreground: 240 5.9% 10%;
     --accent: 47 100% 50%;
@@ -24,8 +24,8 @@
     --radius: 0.5rem;
 
     /* Graph paper background variables */
-    --graph-bg: 220 13% 22%; /* Slightly lighter charcoal */
-    --graph-line: 0 100% 50%; /* Brighter red */
+    --graph-bg: 240 10% 5.5%; /* Near-black, unified with --background */
+    --graph-line: 240 6% 60%; /* Subtle neutral grid */
     --graph-size: 20px; /* Size of each grid square */
     --graph-line-width: 1px; /* Width of grid lines */
   }
@@ -37,7 +37,13 @@
   }
   body {
     @apply font-sans text-foreground;
-    cursor: none;
+  }
+
+  /* Keyboard focus visibility */
+  :focus-visible {
+    outline: 3px solid hsl(var(--secondary));
+    outline-offset: 2px;
+    border-radius: 2px;
   }
   h1,
   h2,
@@ -48,22 +54,17 @@
     @apply font-proza-libre font-bold;
   }
 
-  /* Hide default cursor when custom cursor is active */
-  .cursor-none {
-    cursor: none;
-  }
-
   /* Graph paper background */
   .grid-paper-background {
     background-color: hsl(var(--graph-bg));
     background-image: linear-gradient(
         to right,
-        hsla(var(--graph-line), 0.2) var(--graph-line-width),
+        hsl(var(--graph-line) / 0.12) var(--graph-line-width),
         transparent var(--graph-line-width)
       ),
       linear-gradient(
         to bottom,
-        hsla(var(--graph-line), 0.2) var(--graph-line-width),
+        hsl(var(--graph-line) / 0.12) var(--graph-line-width),
         transparent var(--graph-line-width)
       );
     background-size: var(--graph-size) var(--graph-size);
@@ -114,8 +115,21 @@
 
   /* Content overlay for better readability */
   .content-overlay {
-    background-color: hsla(var(--background), 0.8);
+    background-color: hsl(var(--background) / 0.8);
     backdrop-filter: blur(5px);
+  }
+}
+
+/* Respect reduced-motion for CSS animations/transitions (framer-motion is
+   handled by MotionConfig reducedMotion="user") */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -149,11 +163,8 @@
 
 .markdown-content a {
   color: hsl(var(--primary));
-  text-decoration: none;
-}
-
-.markdown-content a:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .markdown-content img {

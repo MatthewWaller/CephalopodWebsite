@@ -4,8 +4,8 @@ import { Libre_Franklin, Proza_Libre } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import CustomCursor from "@/components/custom-cursor"
 import PageBackground from "@/components/page-background"
+import MotionProvider from "@/components/motion-provider"
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -34,11 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${libreFranklin.variable} ${prozaLibre.variable} font-sans text-foreground`}>
-        <PageBackground />
-        <CustomCursor />
-        <Navbar />
-        <main className="relative z-10">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <PageBackground />
+          <Navbar />
+          <main className="relative z-10">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   )

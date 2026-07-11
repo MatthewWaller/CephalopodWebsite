@@ -13,14 +13,28 @@ export type BlogPostMeta = {
 
 const root = process.cwd()
 
+// blog_index.json carries titles/excerpts HTML-escaped from the Squarespace
+// export; decode them so React doesn't escape them a second time.
+function decodeEntities(text: string): string {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x?27;|&apos;/g, "'")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+}
+
 export function getAllPosts(): BlogPostMeta[] {
   const index = JSON.parse(fs.readFileSync(path.join(root, "blog_index.json"), "utf8")) as BlogPostMeta[]
   return index
     .map((post) => ({
       ...post,
+      title: decodeEntities(post.title),
+      excerpt: decodeEntities(post.excerpt),
       image: post.image ? post.image.replace("../blog_assets/", "/blog_assets/") : null,
     }))
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
 }
 
 export function getPostBySlug(slug: string): (BlogPostMeta & { html: string }) | null {
