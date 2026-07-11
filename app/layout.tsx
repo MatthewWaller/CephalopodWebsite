@@ -19,10 +19,25 @@ const prozaLibre = Proza_Libre({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.cephalopod.studio"),
   title: "Cephalopod Studio",
   description: "A small studio of developers making software to empower and delight.",
   icons: {
     icon: "/assets/octopus.png",
+  },
+  openGraph: {
+    siteName: "Cephalopod Studio",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Cephalopod Studio — Bold. Vibrant. Playful.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 }
 
