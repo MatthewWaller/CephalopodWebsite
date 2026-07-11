@@ -19,7 +19,9 @@ const prozaLibre = Proza_Libre({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.cephalopod.studio"),
+  // SITE_URL is set by the PR-preview workflow so og:image and friends
+  // resolve on the Vercel preview host instead of the production domain
+  metadataBase: new URL(process.env.SITE_URL ?? "https://www.cephalopod.studio"),
   title: "Cephalopod Studio",
   description: "A small studio of developers making software to empower and delight.",
   icons: {
