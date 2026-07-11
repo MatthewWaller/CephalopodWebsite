@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Cephalopod Studio — Bold. Vibrant. Playful.",
+        alt: "Cephalopod Studio — Very. Good. Apps.",
       },
     ],
   },

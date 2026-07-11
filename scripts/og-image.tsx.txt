@@ -4,7 +4,7 @@ import path from "path"
 
 export const dynamic = "force-static"
 
-export const alt = "Cephalopod Studio — Bold. Vibrant. Playful."
+export const alt = "Cephalopod Studio — Very. Good. Apps."
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -77,9 +77,9 @@ export default async function OpengraphImage() {
 
         {/* Headline */}
         <div style={{ display: "flex", fontSize: 96, fontWeight: 800, letterSpacing: -2 }}>
-          <span style={{ color: "#ff2e9a" }}>Bold.</span>
-          <span style={{ color: "#14b8d4", marginLeft: 26 }}>Vibrant.</span>
-          <span style={{ color: "#ffc900", marginLeft: 26 }}>Playful.</span>
+          <span style={{ color: "#ff2e9a" }}>Very.</span>
+          <span style={{ color: "#14b8d4", marginLeft: 26 }}>Good.</span>
+          <span style={{ color: "#ffc900", marginLeft: 26 }}>Apps.</span>
         </div>
 
         {/* Tagline */}

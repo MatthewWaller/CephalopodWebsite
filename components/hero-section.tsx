@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Background Memphis patterns */}
-      <div className="absolute inset-0 memphis-dots opacity-5"></div>
+      <div className="absolute inset-0 memphis-dots opacity-5 pointer-events-none"></div>
 
       {/* Animated Memphis shapes — hidden on small screens where they collide with the headline */}
       <div className="hidden md:block absolute top-[15%] -left-16 w-48 h-48 memphis-shape">
@@ -38,8 +38,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-primary">Bold.</span> <span className="text-secondary">Vibrant.</span>{" "}
-            <span className="text-accent">Playful.</span>
+            <span className="text-primary">Very.</span> <span className="text-secondary">Good.</span>{" "}
+            <span className="text-accent">Apps.</span>
           </motion.h1>
 
           <motion.p

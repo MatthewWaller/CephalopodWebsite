@@ -45,8 +45,8 @@ export default function HomeClient({ projects, posts }: HomeClientProps) {
 
       {/* Introduction */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-muted/30"></div>
-        <div className="absolute inset-0 memphis-dots opacity-5"></div>
+        <div className="absolute inset-0 bg-muted/30 pointer-events-none"></div>
+        <div className="absolute inset-0 memphis-dots opacity-5 pointer-events-none"></div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,8 +77,8 @@ export default function HomeClient({ projects, posts }: HomeClientProps) {
 
       {/* Featured Projects */}
       <section id="projects" ref={targetRef} className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-muted/50"></div>
-        <div className="absolute inset-0 memphis-dots opacity-5"></div>
+        <div className="absolute inset-0 bg-muted/50 pointer-events-none"></div>
+        <div className="absolute inset-0 memphis-dots opacity-5 pointer-events-none"></div>
         <div className="container relative mx-auto px-4">
           <motion.div style={{ opacity, y }} className="mb-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Featured Projects</h2>
@@ -137,7 +137,7 @@ export default function HomeClient({ projects, posts }: HomeClientProps) {
 
       {/* CTA */}
       <section className="py-20 bg-muted relative overflow-hidden">
-        <div className="absolute inset-0 memphis-stripes opacity-10"></div>
+        <div className="absolute inset-0 memphis-stripes opacity-10 pointer-events-none"></div>
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

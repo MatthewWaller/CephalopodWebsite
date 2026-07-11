@@ -308,7 +308,7 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
           transition={{ duration: 0.5 }}
           className="bg-muted rounded-lg p-10 text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 memphis-stripes opacity-10"></div>
+          <div className="absolute inset-0 memphis-stripes opacity-10 pointer-events-none"></div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Try <span className="text-primary">{project.title}</span>
