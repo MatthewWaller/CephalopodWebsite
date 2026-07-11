@@ -1,0 +1,70 @@
+name: PR Preview (Vercel)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: team_zCKoE0DgczTDarzS5A35yFZ2
+  VERCEL_PROJECT_ID: prj_X7Gl5hja3IhI1mShe6WQLkqNcgDG
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Pull Vercel environment
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build
+        env:
+          SITE_URL: https://cephalopod-website-abemangona-7940-abemangona-7940s-projects.vercel.app
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy preview
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Comment preview URL on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.deploy.outputs.url }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          body="🔍 **Preview deployed:** $URL
+
+          Stable alias: https://cephalopod-website-abemangona-7940-abemangona-7940s-projects.vercel.app
+
+          _Updated for commit ${{ github.event.pull_request.head.sha }}_"
+          comment_id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" \
+            --jq '[.[] | select(.body | startswith("🔍 **Preview deployed:**"))][0].id // empty')
+          if [ -n "$comment_id" ]; then
+            gh api "repos/$GITHUB_REPOSITORY/issues/comments/$comment_id" -X PATCH -f body="$body"
+          else
+            gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "$body"
+          fi

@@ -1,0 +1,704 @@
+[
+  {
+    "slug": "3d-scanner-sapling",
+    "title": "Sapling 3D Scanner",
+    "icon": "/assets/sapling_icon.png",
+    "circular": false,
+    "tagline": "Easy, fast model capture — LiDAR and 360 scanning on iPhone and iPad.",
+    "description": [
+      "Make 3D models for augmented reality, 3D printing, game development, or simply sharing with friends.",
+      "It performs photogrammetry on images with LIDAR enabled scanning, or you can use AI generate objects from text. Export in a variety of 3D quality, including high-end textures. All photogrammetry processing happens on your device!"
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/3d-scanner-sapling/id6450019198",
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo126/v4/39/7d/4c/397d4c3f-1a81-927a-f5ac-6d9e76cd428f/P626994347_default.m3u8",
+        "poster": "/assets/sapling_icon.png"
+      }
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Photogrammetry from camera images",
+          "LiDAR scanning (on supported devices)",
+          "Export in USDZ, OBJ, STL, and PLY formats",
+          "High-quality textures",
+          "Local processing (no cloud required)",
+          "No subscriptions needed"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 17.0 or later",
+          "iPad: Requires iPadOS 17.0 or later",
+          "Mac: Requires macOS 15.0 or later",
+          "Apple Vision Pro: Requires visionOS 2.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "At Cephalopod Studio, we take your privacy seriously. 3D Scanner: Sapling does not collect any user data. All processing happens locally on your device.",
+      "The app does not require an account, does not track your usage patterns, and does not send any information to our servers or third parties. Your 3D models and scans remain completely private and under your control at all times.",
+      "This app complies with Apple's App Privacy standards and has disclosed to Apple that it does not collect any user data."
+    ]
+  },
+  {
+    "slug": "cannotignore",
+    "title": "Cannot Ignore",
+    "icon": "/assets/cannotignore_icon.png",
+    "circular": false,
+    "tagline": "Critical alarms you can't miss",
+    "description": [
+      "Never miss another important moment. Cannot Ignore delivers full-screen alarms designed specifically for those critical, one-time events that demand your full attention.",
+      "When your alarm fires, Cannot Ignore takes over your entire screen with unmissable alerts. Import events from Calendar or Reminders with automatic link detection for video conferences, set custom alarm sounds, and access meeting links instantly when alarms fire.",
+      "Perfect for crucial meetings, appointments, flight departures, and deadlines you absolutely cannot afford to miss."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/cannot-ignore-super-alarms/id6755636605",
+    "videos": [
+      {
+        "src": "/assets/cannotignore_video.mp4",
+        "poster": null
+      }
+    ],
+    "featuresHeading": "Key Features",
+    "features": [
+      {
+        "heading": "Unmissable Alerts",
+        "items": [
+          "Full-screen alarms that take over your device",
+          "Custom audio file support for unique alarm sounds",
+          "Real-time alarm status updates with color-coded icons",
+          "In-app alarm control and monitoring",
+          "Edit existing alarms anytime"
+        ]
+      },
+      {
+        "heading": "Smart Integration",
+        "items": [
+          "Import from Calendar events with automatic link detection",
+          "Import from Reminders with automatic link detection",
+          "Detects video conference links (Zoom, Meet, Teams)",
+          "One-tap access to links when alarms fire",
+          "Automatically includes event notes and URLs"
+        ]
+      },
+      {
+        "heading": "Perfect For",
+        "items": [
+          "Job interviews and important meetings",
+          "Medical appointments",
+          "Flight departures and travel",
+          "Deadline submissions",
+          "Video conference calls",
+          "Time-sensitive commitments"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Focused",
+    "privacy": [
+      "At Cephalopod Studio, your privacy comes first. Cannot Ignore is designed with privacy at its core.",
+      "No Data Collected: The developer does not collect any data from this app.",
+      "No Third-Party Tracking: We do not use any third-party trackers or analytics.",
+      "Your Data Stays Yours: Your alarms and settings remain private on your devices.",
+      "Local Storage Only: All alarm data is stored locally using iOS AlarmKit.",
+      "Calendar and Reminders access is used only for the import feature and no data leaves your device."
+    ]
+  },
+  {
+    "slug": "directorscut",
+    "title": "Director's Cut",
+    "icon": "/assets/directorscut_icon.png",
+    "circular": false,
+    "tagline": "AI-powered video editing from the command line. One prompt, one command, one finished video with narration and subtitles.",
+    "description": [
+      "Raw footage in. Finished video out."
+    ],
+    "storeLinks": [
+      {
+        "label": "Get a License Key — $29",
+        "url": "https://buy.polar.sh/polar_cl_c3DqnSEinyIb7eELj9SzjxDnRfig6TOzfpc6W48Ks04"
+      },
+      {
+        "label": "View on GitHub",
+        "url": "https://github.com/MatthewWaller/DirectorsCutCLI"
+      }
+    ],
+    "videos": [
+      {
+        "src": "/assets/directorscut_videos/image_to_3d.mp4#t=0.001",
+        "poster": null
+      },
+      {
+        "src": "/assets/directorscut_videos/multi_object_comparison.mp4#t=0.001",
+        "poster": null
+      },
+      {
+        "src": "/assets/directorscut_videos/getting_started.mp4#t=0.001",
+        "poster": null
+      }
+    ],
+    "featuresHeading": "Everything you need, nothing you don't",
+    "features": [
+      {
+        "heading": "Prompt-Driven Editing",
+        "items": [
+          "Describe the video you want in plain English. The AI selects clips, sequences them, adds transitions, and renders your timeline."
+        ]
+      },
+      {
+        "heading": "AI Narration",
+        "items": [
+          "Auto-generated voiceover scripts timed to your video. Use cloud TTS or clone your own voice locally with Chatterbox — your voice data never leaves your machine."
+        ]
+      },
+      {
+        "heading": "Animated Subtitles",
+        "items": [
+          "TikTok-style word-by-word subtitles with precise timing. Multiple styles to match your content."
+        ]
+      },
+      {
+        "heading": "Transparent Decisions",
+        "items": [
+          "Every edit decision is saved as readable, editable JSON. Tweak the timeline by hand and re-render instantly — no AI call needed."
+        ]
+      },
+      {
+        "heading": "Batch Production",
+        "items": [
+          "Run the same footage with 10 different prompts to get 10 unique videos. A/B test edits at scale without touching a timeline."
+        ]
+      },
+      {
+        "heading": "NLE Export",
+        "items": [
+          "Export rough cuts as OpenTimelineIO for finishing in Premiere Pro, DaVinci Resolve, or Final Cut Pro."
+        ]
+      }
+    ],
+    "extraSections": [
+      {
+        "heading": "Made with Sapling footage",
+        "paragraphs": [
+          "Real videos generated from raw Sapling screen recordings with a single command."
+        ],
+        "items": [
+          "Image-to-3D AI Generation — Generating 3D models from images using AI, narrated and edited automatically.",
+          "Multi-Object Comparison — Multiple scanned objects compared in a single narrated video.",
+          "Getting Started Tutorial — An auto-generated how-to tutorial from raw screen recordings."
+        ],
+        "cta": {
+          "label": "Check out Sapling",
+          "href": "/projects/3d-scanner-sapling"
+        }
+      },
+      {
+        "heading": "Terminal demo",
+        "items": [
+          "$ directorscut edit \\",
+          "  -p \"Create a 30-second product demo with upbeat narration\" \\",
+          "  -f ./raw-footage/ \\",
+          "  -o ./product-demo \\",
+          "  --narrate --subtitle",
+          "Analyzing 47 clips... done",
+          "Generating edit decisions... 12 scenes selected",
+          "Writing narration script... 84 words",
+          "Synthesizing voiceover... done",
+          "Rendering timeline... done",
+          "Saved to product-demo/product-demo.mp4 (0:32)"
+        ],
+        "paragraphs": [
+          "Condensed for demonstration"
+        ]
+      },
+      {
+        "heading": "Get started in 30 seconds",
+        "items": [
+          "# Install via Homebrew (macOS Apple Silicon)",
+          "$ brew tap MatthewWaller/directorscut",
+          "$ brew install --cask directorscut",
+          "# Add your Gemini API key",
+          "$ directorscut setup",
+          "# Make your first video",
+          "$ directorscut edit -p \"30s product demo\" -f ./clips/"
+        ],
+        "paragraphs": [
+          "No Python install needed — everything is bundled. Just Homebrew and a free Gemini API key (https://aistudio.google.com/apikey)."
+        ]
+      },
+      {
+        "heading": "How it works",
+        "items": [
+          "1. Point it at your footage — Pass a folder of raw clips. Director's Cut detects scenes, transcribes speech, and builds a visual understanding of every shot.",
+          "2. Describe what you want — Write a prompt: \"30-second product demo with narration\" or \"highlight reel of the best action shots.\" The AI makes the editorial decisions.",
+          "3. Get a finished video — Out comes a rendered MP4 with transitions, narration, and subtitles. Publish directly to YouTube or TikTok, or export to your NLE for final polish."
+        ]
+      },
+      {
+        "heading": "Built for people who'd rather ship than scrub timelines",
+        "paragraphs": [
+          "3 free video generations to try before you buy."
+        ],
+        "items": [
+          "Content Creators — Batch-produce TikToks, Reels, and Shorts from a single shoot. Run the same footage 10 times with different prompts, pick the best one.",
+          "Developers & PMs — Turn screen recordings into polished product demos. No timeline scrubbing. No drag-and-drop. Just a prompt and an MP4.",
+          "Agencies & Marketing — Generate rough cuts in seconds, then hand off to your editor via OTIO export. A/B test video edits without multiplying production time.",
+          "Educators — Auto-narrate lecture footage, add subtitles for accessibility, and publish directly — all from one command."
+        ]
+      },
+      {
+        "heading": "Pricing",
+        "paragraphs": [
+          "$29",
+          "One-time purchase. Yours forever.",
+          "No subscription. No per-minute pricing. All future updates included."
+        ],
+        "items": [
+          "3 free video generations to try first",
+          "Unlimited use after purchase",
+          "AI narration & animated subtitles",
+          "Local voice cloning (on-device, private)",
+          "YouTube & TikTok publishing",
+          "OpenTimelineIO export to pro NLEs"
+        ]
+      },
+      {
+        "heading": "Requirements",
+        "items": [
+          "Mac with Apple Silicon (M1 / M2 / M3 / M4)",
+          "Homebrew (installs FFmpeg automatically)",
+          "Gemini API key (free tier available)",
+          "No Python needed (bundled)"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fab3d",
+    "title": "Fab3D",
+    "icon": "/assets/fab3d_icon.png",
+    "circular": false,
+    "tagline": "Your 3D Model Library",
+    "description": [
+      "Fab3D is the ultimate space for 3D enthusiasts, designers, and creators. Browse, collect, and share stunning 3D models from the Sketchfab community, all in one beautifully designed app.",
+      "Whether you're a professional 3D artist, hobbyist, or simply appreciate beautiful 3D creations, Fab3D transforms how you discover and interact with 3D content. Your entire 3D model collection, always at your fingertips."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/fab3d/id6744257284",
+    "screenshots": [
+      "/assets/fab3d_01.png",
+      "/assets/fab3d_02.png",
+      "/assets/fab3d_03.png",
+      "/assets/fab3d_04.png",
+      "/assets/fab3d_05.png",
+      "/assets/fab3d_06.png",
+      "/assets/fab3d_07.png",
+      "/assets/fab3d_08.png"
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Discover thousands of high-quality 3D models from talented creators worldwide",
+          "Save favorites to your personal Likes collection",
+          "Download models for offline viewing",
+          "Upload USDZ, OBJ, STL, and other 3D creations to Sketchfab",
+          "Built-in 3D viewer — rotate, zoom, and explore every angle",
+          "AR-ready: view models in your real-world environment",
+          "Organize and share with friends, colleagues, or clients"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 18.6 or later",
+          "Mac: Requires macOS 15.6 or later (M1 or later)",
+          "Apple Vision: Requires visionOS 2.6 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "We do not collect any of your data."
+    ]
+  },
+  {
+    "slug": "journal-diary-rambler",
+    "title": "Rambler: Voice Journal & Diary",
+    "icon": "/assets/rambler_icon.png",
+    "circular": false,
+    "tagline": "Hands-free journaling for iOS 26",
+    "description": [
+      "Rambler is a hands-free journaling app that lets you capture your thoughts out loud during walks, commutes, or chores. All transcription happens on-device using iOS 26 APIs, keeping your private reflections truly private."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/journal-diary-rambler/id6748891162",
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/47/1e/99/471e9917-6d26-6cda-b074-fa05ea21ced0/P1168728107_default.m3u8",
+        "poster": "/assets/rambler_icon.png"
+      }
+    ],
+    "featuresHeading": "Key Features",
+    "features": [
+      {
+        "heading": "Hands-Free Voice Journaling",
+        "items": [
+          "Speak your thoughts naturally during walks or chores",
+          "On-device transcription using iOS 26 APIs",
+          "No Apple Intelligence required",
+          "Supports 10+ languages and 35+ regional variants"
+        ]
+      },
+      {
+        "heading": "Intelligent Prompts",
+        "items": [
+          "AI-generated prompts based on your current entry",
+          "150+ curated prompts for daily logging, emotions, and creative writing",
+          "Spoken aloud using on-device text-to-speech",
+          "Voice commands: \"Next prompt\" or \"Stop session\""
+        ]
+      },
+      {
+        "heading": "Rich Attachments",
+        "items": [
+          "Add photos, videos, and audio clips",
+          "Tag locations and moods",
+          "iOS Journal API integration for memories and activities",
+          "Rich text formatting with iOS 26"
+        ]
+      },
+      {
+        "heading": "Privacy-First AI Features",
+        "items": [
+          "Auto-generate bullet point summaries (optional)",
+          "Automatic title generation (optional)",
+          "Mood detection (optional)",
+          "All AI features can be disabled for 100% privacy"
+        ]
+      },
+      {
+        "heading": "Data Portability",
+        "items": [
+          "Export entries individually or in bulk",
+          "All attachments included in exports",
+          "Own your data completely"
+        ]
+      },
+      {
+        "heading": "Platform Support",
+        "items": [
+          "Requires iOS 26 or later",
+          "Designed for both iPhone and iPad"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy & Transparency",
+    "privacy": [
+      "At Cephalopod Studio, we take your privacy seriously. All transcription in Rambler happens entirely on-device using iOS 26 APIs. Your private reflections stay on your device.",
+      "Optional AI features (summaries, titles, mood detection) can be completely disabled for a 100% private experience. When enabled, these features also run on-device whenever possible.",
+      "The iOS Journal API integration preserves privacy by design—you must manually select memories and activities through Apple's journaling suggestions picker. We cannot access this data without your explicit action.",
+      "Your data is yours. Export your entries and attachments anytime, in full."
+    ]
+  },
+  {
+    "slug": "novel-writing-candlelight",
+    "title": "Novel Writing: Candlelight",
+    "icon": "/assets/candlelight_icon.png",
+    "circular": false,
+    "tagline": "Write amazing stories with a Story Bible and smart assistance",
+    "description": [
+      "Write works of fiction with the help of Candlelight. This app aims to respect both writers who just want to write, with no bells and whistles, but also creatives who want to explore and tinker with what AI can do."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/novel-writing-candlelight/id6584513293",
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/84/0d/d7/840dd7f6-1317-a2d8-f71b-b4cfc83924d0/P953487917_default.m3u8",
+        "poster": "/assets/candlelight_icon.png"
+      }
+    ],
+    "featuresHeading": "App Features",
+    "features": [
+      {
+        "heading": "Level 1: No AI",
+        "items": [
+          "Story Bible with sections for characters, themes, world building, and plot outlines",
+          "Fully-featured rich text editor",
+          "Convert your book into a PDF",
+          "Organize your work into chapters or sections",
+          "Full-screen writing experience with removable sidebars"
+        ]
+      },
+      {
+        "heading": "Level 2: Some AI",
+        "items": [
+          "Generate content for each section of the Story Bible",
+          "Narrative autocomplete that understands your entire story context",
+          "Get unblocked with AI-powered writing suggestions"
+        ]
+      },
+      {
+        "heading": "Level 3: Full AI",
+        "items": [
+          "Create an entire novelette automatically",
+          "Generate content based on your Story Bible",
+          "Use as a starting point for further development"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 18.0 or later",
+          "iPad: Requires iPadOS 18.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "We use third party analytics to help us improve the app.",
+      "We do not sell any of your data.",
+      "Your writing is sent to third-party LLM vendors for the generative components for context, though we've ensured that permission to train on your data is denied."
+    ]
+  },
+  {
+    "slug": "passage",
+    "title": "Passage",
+    "icon": "/assets/passage_icon.png",
+    "circular": true,
+    "tagline": "Fully immersive worlds for work and play on Apple Vision Pro",
+    "description": [
+      "Get focused work done in wondrous places. Visit fully 3D worlds or generate any place with AI. Feel productive; feel at ease; feel awed."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/immersive-360-worlds-passage/id6470159510",
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/86/14/66/8614662a-1442-70ac-4c19-438486b7b9b9/P899834711_default.m3u8",
+        "poster": "/assets/passage_icon.png"
+      }
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "AI-generated or artist-made immersive 3D worlds",
+          "Upload your own places or choose from curated options",
+          "Spatial computing cutout to see your desk, keyboard, coffee",
+          "In-app browser for web browsing, streaming video and music",
+          "Rich text editor with export capabilities (.rtf)",
+          "Focus mode for distraction-free writing",
+          "Rotate worlds to choose your perfect vista",
+          "Support for multiple windows"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "Apple Vision Pro: Requires visionOS 2.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "We use third party analytics to help us improve the app.",
+      "We do not sell any of your data.",
+      "Your prompts are sent to a third-party API to generate images."
+    ]
+  },
+  {
+    "slug": "pearl",
+    "title": "Pearl: Meaningful Reminders",
+    "icon": "/assets/pearl_icon.jpeg",
+    "circular": false,
+    "tagline": "Motivation, Wellness, Affirm",
+    "description": [
+      "Make meaningful reminders that appear at random during time periods of your choosing. Reminders can sync across devices & display images. Add widgets!",
+      "Create reminders that mean a lot to you, that bring you joy comfort and rest. You choose the time frame, and a number of reminders that you select will appear randomly during that period. You can even choose an image to go with your notifications, which can sync across devices.",
+      "Enjoy a beautiful tong notification sound and your hand-crafted reminder. The background animates subtly, respecting accessibility choices."
+    ],
+    "screenshots": [
+      "/assets/pearl_1.png",
+      "/assets/pearl_2.png",
+      "/assets/pearl_3.png",
+      "/assets/pearl_4.png"
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Create custom meaningful reminders",
+          "Reminders appear randomly within chosen timeframes",
+          "Sync reminders & images across devices (iPhone, iPad, Mac, Watch, Vision)",
+          "Attach images to notifications",
+          "Home Screen & Lock Screen Widgets",
+          "Apple Watch app with complication",
+          "Subtle animated background",
+          "Light and Dark Mode support",
+          "Customizable notification titles & multiple app icons",
+          "Option to disable suggestions & word count",
+          "Respects Reduce Motion & Transparency settings",
+          "Private, on-device AI Pearl generation for supported devices"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 17.0 or later",
+          "iPad: Requires iPadOS 17.0 or later",
+          "Mac: Requires macOS 14.0 or later",
+          "Apple Watch: Requires watchOS 10.0 or later",
+          "Apple Vision: Requires visionOS 1.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Focused",
+    "privacy": [
+      "At Cephalopod Studio, your privacy comes first. Pearl: Meaningful Reminders is designed with privacy at its core.",
+      "No Data Collected: The developer does not collect any data from this app.",
+      "No Third-Party Tracking: We do not use any third-party trackers or analytics.",
+      "Your Data Stays Yours: Your reminders and settings remain private on your devices or synced via your private iCloud account.",
+      "You can review the full privacy policy on the App Store or the developer's website."
+    ],
+    "storeLinks": [
+      {
+        "label": "View on App Store",
+        "url": "https://apps.apple.com/us/app/pearl-meaningful-reminders/id1567837432?platform=iphone"
+      }
+    ]
+  },
+  {
+    "slug": "runpal",
+    "title": "RunPal",
+    "icon": "/assets/runpal_icon.png",
+    "circular": false,
+    "tagline": "Your Crew. Every Mile.",
+    "description": [
+      "Run together on a shared live map with real voice cheers and haptic buzzes. Connect with friends and community members in real time, no matter where they are, for a connected running experience.",
+      "Initiate group runs in one tap, host community events, send mid-run voice messages that auto-duck your music, and stay accountable with friend nudges and an AI coach that learns your schedule."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/run-tracker-runpal/id6758916771",
+    "screenshots": [
+      "/assets/runpal_01.png",
+      "/assets/runpal_02.png",
+      "/assets/runpal_03.png",
+      "/assets/runpal_04.png",
+      "/assets/runpal_05.png",
+      "/assets/runpal_06.png"
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Live shared run map with real-time crew visibility",
+          "Voice message cheers up to 15 seconds, with music auto-ducking",
+          "Haptic buzz notifications from friends",
+          "One-tap group run creation",
+          "Community event hosting and participation",
+          "Friend nudge system for accountability",
+          "AI fitness coach that learns your schedule",
+          "GPS tracking for distance, pace, and time"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 26.0 or later",
+          "iPad: Requires iPadOS 26.0 or later",
+          "Mac: Requires macOS 26.0 or later (M1 or later)",
+          "Apple Vision: Requires visionOS 26.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "See the privacy policy at runpal.fit/privacy (https://runpal.fit/privacy)."
+    ]
+  },
+  {
+    "slug": "todont",
+    "title": "ToDon't",
+    "icon": "/assets/todont_icon.jpeg",
+    "circular": false,
+    "tagline": "Fun with to-dos & task lists",
+    "description": [
+      "A to-do list filled with things to NOT do! Have fun with playful effects & feel productive, and, of course, add actual things to do onto the list for your real tasks!",
+      "Add random, pre-made tasks to your daily to-do list, specifically of things to NOT do, so that you can scratch them off and immediately feel productive while having fun. Get cool check-off effects, like setting your tasks on fire or see them bounce around. All of your tasks can sync to all of your devices via a shared ToDon't list in the Reminders app. The app has dozens and dozens of things to not do! And you can celebrate your accomplishments with random celebrations when you check off all your items!",
+      "ToDon't is not currently available on the App Store."
+    ],
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo122/v4/12/f9/e9/12f9e93d-58ad-3d23-3adb-e92f94ce2cff/P494590490_default.m3u8",
+        "poster": "/assets/todont_icon.jpeg"
+      }
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Fun, \"don't do\" tasks",
+          "Playful check-off effects (fire, bounce)",
+          "Syncs with Apple Reminders",
+          "Dozens of pre-made \"don'ts\"",
+          "Random celebrations for completion",
+          "Add real tasks too!"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "iPhone: Requires iOS 15.2 or later",
+          "iPad: Requires iPadOS 15.2 or later",
+          "iPod touch: Requires iOS 15.2 or later",
+          "Mac: Requires macOS 12.1 or later (Apple M1 chip or later)",
+          "Apple Vision: Requires visionOS 1.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "Your privacy matters! ToDon't doesn't use any tracking or third-party analytics at all!"
+    ]
+  },
+  {
+    "slug": "very-nice-clocks",
+    "title": "Very Nice Clocks",
+    "icon": "/assets/veryniceclocks_icon.png",
+    "circular": true,
+    "tagline": "Wonderful clocks for Apple Vision Pro",
+    "description": [
+      "Experience beautiful, animated 3D timepieces for clocks, countdowns, stopwatches, and Pomodoro timers, combining aesthetic appeal with practical function."
+    ],
+    "appStoreUrl": "https://apps.apple.com/us/app/very-nice-clocks/id6740150306",
+    "videos": [
+      {
+        "src": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/69/76/e3/6976e388-de57-40d1-a1c3-daaa2fbf3ab6/P1116749539_default.m3u8",
+        "poster": "/assets/veryniceclocks_icon.png"
+      }
+    ],
+    "featuresHeading": "App Store Details",
+    "features": [
+      {
+        "heading": "Features",
+        "items": [
+          "Wonderful clocks"
+        ]
+      },
+      {
+        "heading": "Compatibility",
+        "items": [
+          "Apple Vision Pro: Requires visionOS 2.0 or later"
+        ]
+      }
+    ],
+    "privacyHeading": "Privacy Policy",
+    "privacy": [
+      "We do not collect any of your data."
+    ]
+  }
+]
