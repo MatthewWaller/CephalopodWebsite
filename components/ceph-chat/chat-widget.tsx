@@ -67,7 +67,8 @@ export default function ChatWidget() {
   }, [])
 
   return (
-    <>
+    // Desktop-only by product decision: Inky (and his ~1GB brain) stays off mobile
+    <div className="hidden md:block">
       <AnimatePresence>
         {open && <ChatPanel brain={brain} onClose={handleClose} onCelebrate={doWiggle} />}
       </AnimatePresence>
@@ -153,6 +154,6 @@ export default function ChatWidget() {
           </motion.div>
         </motion.div>
       </div>
-    </>
+    </div>
   )
 }
