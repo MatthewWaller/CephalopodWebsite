@@ -33,7 +33,7 @@ export default function HeroSection() {
           className="text-center max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-proza-libre"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.12] mb-6 font-proza-libre"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
