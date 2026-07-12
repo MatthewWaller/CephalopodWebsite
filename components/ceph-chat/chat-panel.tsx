@@ -326,7 +326,7 @@ export default function ChatPanel({
         >
           Talk to the studio
         </Link>
-        <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm text-secondary underline">
+        <a href={`mailto:${CONTACT_EMAIL}`} className="inline-block px-2 py-2 text-sm text-secondary underline">
           {CONTACT_EMAIL}
         </a>
       </div>
@@ -439,7 +439,7 @@ export default function ChatPanel({
           <button
             type="button"
             onClick={enterIdeation}
-            className="rounded-full border-2 border-primary/50 px-3.5 py-1 text-xs transition-colors hover:bg-primary hover:text-primary-foreground"
+            className="min-h-[36px] rounded-full border-2 border-primary/50 px-3.5 py-1.5 text-xs transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             ✨ Dream up an app with me
           </button>
@@ -529,9 +529,13 @@ export default function ChatPanel({
           </div>
         </div>
         {body}
-        <div className="border-t border-muted px-4 py-2 text-center text-xs text-muted-foreground">
+        <div className="border-t border-muted px-4 py-0.5 text-center text-xs text-muted-foreground">
           Prefer a human?{" "}
-          <Link href="/contact" onClick={onClose} className="text-secondary underline underline-offset-2">
+          <Link
+            href="/contact"
+            onClick={onClose}
+            className="inline-block px-2 py-2.5 text-secondary underline underline-offset-2"
+          >
             Talk to the studio →
           </Link>
         </div>

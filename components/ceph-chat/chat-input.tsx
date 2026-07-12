@@ -53,7 +53,7 @@ export default function ChatInput({
             send()
           }
         }}
-        className="flex-1 resize-none rounded-2xl bg-muted px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+        className="flex-1 resize-none rounded-2xl bg-muted px-4 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 md:text-sm"
       />
       <button
         type="button"

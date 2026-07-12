@@ -648,7 +648,7 @@ export default function IdeationFlow({
               <button
                 type="button"
                 onClick={onExit}
-                className="mx-auto text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
+                className="mx-auto px-2 py-2.5 text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
               >
                 or keep chatting about octopuses →
               </button>
@@ -694,7 +694,7 @@ export default function IdeationFlow({
         <ChatInput
           onSend={handleIdeaText}
           disabled={busy}
-          placeholder="e.g. an app that rates my houseplants' moods"
+          placeholder="Your app idea, one sentence…"
           autoFocus
         />
       )}
