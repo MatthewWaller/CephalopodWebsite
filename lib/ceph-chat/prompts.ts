@@ -84,7 +84,7 @@ export const GEN_PARAMS: {
   json: GenParams
   jsonRetry: GenParams
 } = {
-  chat: { temperature: 0.7, top_p: 0.95, max_tokens: 200 },
+  chat: { temperature: 0.7, top_p: 0.8, max_tokens: 200 },
   guide: { temperature: 0.6, top_p: 0.9, max_tokens: 120 },
   json: { temperature: 0.2, top_p: 0.9, max_tokens: 700 },
   jsonRetry: { temperature: 0.0, top_p: 1.0, max_tokens: 700 },

@@ -204,7 +204,7 @@ export default function ChatPanel({
           },
           controller.signal,
         )
-        reply = full.trim() ? full : acc
+        reply = (full.trim() ? full : acc).trim() || CHAT_ERROR_BUBBLE
       } catch {
         reply = CHAT_ERROR_BUBBLE
       }

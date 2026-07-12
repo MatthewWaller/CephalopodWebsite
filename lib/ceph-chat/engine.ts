@@ -247,6 +247,42 @@ function toApiMessages(messages: ChatMessage[]): ChatCompletionMessageParam[] {
   return messages.map((m) => ({ role: m.role, content: m.content }) as ChatCompletionMessageParam)
 }
 
+// Qwen3 emits an empty "<think>\n\n</think>" block even with enable_thinking:false —
+// strip it (and any unclosed think block) so tag junk never reaches the UI.
+function stripThink(text: string): string {
+  return text
+    .replace(/^\s*<think>[\s\S]*?<\/think>\s*/i, "")
+    .replace(/^\s*<think>[\s\S]*$/i, "")
+    .trimStart()
+}
+
+// Streaming variant: hold tokens until we know the reply doesn't start with (or has
+// exited) a think block, then pass deltas through untouched.
+function createThinkFilter(onToken: (delta: string) => void): (delta: string) => void {
+  let buf = ""
+  let passthrough = false
+  return (delta: string) => {
+    if (passthrough) {
+      onToken(delta)
+      return
+    }
+    buf += delta
+    const lead = buf.trimStart()
+    if (!lead) return
+    if (lead.length < 7 && "<think>".startsWith(lead)) return // could still become a think tag
+    if (!lead.startsWith("<think>")) {
+      passthrough = true
+      onToken(lead)
+      return
+    }
+    const close = lead.indexOf("</think>")
+    if (close === -1) return // still inside the think block
+    const after = lead.slice(close + "</think>".length).trimStart()
+    passthrough = true
+    if (after) onToken(after)
+  }
+}
+
 export function streamChat(
   messages: ChatMessage[],
   params: GenParams,
@@ -264,6 +300,7 @@ export function streamChat(
     }
     signal?.addEventListener("abort", onAbort, { once: true })
     let text = ""
+    const emit = createThinkFilter(onToken)
     try {
       const chunks = await eng.chat.completions.create({
         messages: toApiMessages(messages),
@@ -277,12 +314,12 @@ export function streamChat(
         const delta = chunk.choices[0]?.delta.content ?? ""
         if (delta) {
           text += delta
-          onToken(delta)
+          emit(delta)
         }
       }
-      return text
+      return stripThink(text)
     } catch (err) {
-      if (aborted) return text
+      if (aborted) return stripThink(text)
       throw err
     } finally {
       signal?.removeEventListener("abort", onAbort)
@@ -310,7 +347,7 @@ export function generateText(
         max_tokens: params.max_tokens,
         extra_body: { enable_thinking: false },
       })
-      return reply.choices[0]?.message.content ?? ""
+      return stripThink(reply.choices[0]?.message.content ?? "")
     } finally {
       signal?.removeEventListener("abort", onAbort)
     }
@@ -337,7 +374,7 @@ async function completeJson(
       response_format: { type: "json_object", schema },
       extra_body: { enable_thinking: false },
     })
-    return reply.choices[0]?.message.content ?? ""
+    return stripThink(reply.choices[0]?.message.content ?? "")
   } finally {
     signal?.removeEventListener("abort", onAbort)
   }
