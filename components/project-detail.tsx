@@ -296,6 +296,13 @@ export default function ProjectDetail({ project }: { project: ProjectDetailData 
               {project.privacy.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
+              {project.privacyPolicyUrl && (
+                <p>
+                  <Link href={project.privacyPolicyUrl} className="text-secondary underline underline-offset-2">
+                    Read the full Cephalopod Studio privacy policy
+                  </Link>
+                </p>
+              )}
             </div>
           </motion.section>
         )}

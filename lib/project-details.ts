@@ -26,6 +26,7 @@ export type ProjectDetail = {
   features?: FeatureSection[]
   privacyHeading?: string
   privacy?: string[]
+  privacyPolicyUrl?: string
   extraSections?: ExtraSection[]
 }
 

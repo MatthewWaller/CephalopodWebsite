@@ -11,6 +11,7 @@ const quickLinks = [
   { href: "/blog", label: "Blogs" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
 ]
 
 export default function Footer() {

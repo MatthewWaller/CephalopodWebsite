@@ -25,7 +25,7 @@
           "LiDAR scanning (on supported devices)",
           "Export in USDZ, OBJ, STL, and PLY formats",
           "High-quality textures",
-          "Local processing (no cloud required)",
+          "Photogrammetry processed on your device",
           "No subscriptions needed"
         ]
       },
@@ -40,10 +40,12 @@
       }
     ],
     "privacyHeading": "Privacy Policy",
+    "privacyPolicyUrl": "/privacy",
     "privacy": [
-      "At Cephalopod Studio, we take your privacy seriously. 3D Scanner: Sapling does not collect any user data. All processing happens locally on your device.",
-      "The app does not require an account, does not track your usage patterns, and does not send any information to our servers or third parties. Your 3D models and scans remain completely private and under your control at all times.",
-      "This app complies with Apple's App Privacy standards and has disclosed to Apple that it does not collect any user data."
+      "Photogrammetry and LiDAR scanning in Sapling are processed on your device. Models and scans you create that way stay on your device unless you choose a feature that sends data elsewhere.",
+      "If you create an account, Sapling uses third-party services to create and sign in to that account. The information you submit for account creation — such as your email address and sign-in credentials — is shared with those third parties. They process it to provide the account, under their own privacy policies.",
+      "AI features, including text-to-3D, are provided by third parties. When you use them, the content you submit — such as text prompts and other generation inputs — is sent to those providers. They use that data to produce the result, and they may retain or otherwise use it under their own terms and privacy policies, including to operate or improve their services.",
+      "We do not sell your personal information. The studio-wide policy at cephalopod.studio/privacy covers Sapling along with our website and other apps."
     ]
   },
   {
