@@ -46,6 +46,19 @@
       "If you create an account, Sapling uses third-party services to create and sign in to that account. The information you submit for account creation — such as your email address and sign-in credentials — is shared with those third parties. They process it to provide the account, under their own privacy policies.",
       "AI features, including text-to-3D, are provided by third parties. When you use them, the content you submit — such as text prompts and other generation inputs — is sent to those providers. They use that data to produce the result, and they may retain or otherwise use it under their own terms and privacy policies, including to operate or improve their services.",
       "We do not sell your personal information. The studio-wide policy at cephalopod.studio/privacy covers Sapling along with our website and other apps."
+    ],
+    "extraSections": [
+      {
+        "heading": "Press",
+        "paragraphs": [
+          "Writing about Sapling? The press kit has the app icon, screenshots and a preview video, all free to use in coverage. Version 2.2 arrives on November 3, 2026, in six new languages.",
+          "Auf Deutsch: Pressekit mit deutscher Oberfläche unter https://www.cephalopod.studio/press/sapling/"
+        ],
+        "cta": {
+          "label": "Open the press kit",
+          "href": "/press/sapling/en/"
+        }
+      }
     ]
   },
   {
