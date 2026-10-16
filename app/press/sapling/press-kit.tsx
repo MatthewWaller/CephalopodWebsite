@@ -22,7 +22,7 @@ const COPY = {
     intro:
       "3D Scanner: Sapling verwandelt echte Objekte in detaillierte 3D-Modelle, direkt auf iPhone, iPad und Mac. Mit LiDAR geht man einmal um ein Objekt herum, ohne LiDAR hilft ein Drehteller. Die Modelle lassen sich in AR platzieren, auf ihre echte Größe bringen und als STL, OBJ, PLY oder USDZ exportieren.",
     release:
-      "Version 2.2 erscheint am 3. November 2026 und spricht dann Deutsch, Französisch, Spanisch, Japanisch, Chinesisch und Koreanisch. Eine Vorab-Testversion über TestFlight (iPhone, iPad, Mac) schicken wir gerne auf Anfrage.",
+      "Version 2.2 ist ab sofort im App Store und spricht Deutsch, Französisch, Spanisch, Japanisch, Chinesisch und Koreanisch.",
     zip: "Alles herunterladen (.zip, 39 MB)",
     zipFile: "Sapling-Pressekit.zip",
     appStore: "https://apps.apple.com/de/app/3d-scanner-sapling/id6450019198",
@@ -41,7 +41,7 @@ const COPY = {
     intro:
       "3D Scanner: Sapling turns real-world objects into detailed 3D models, right on iPhone, iPad and Mac. With LiDAR you walk once around an object; without it, a turntable does the job. Models can be placed in AR, set to their real-world size, and exported as STL, OBJ, PLY or USDZ.",
     release:
-      "Version 2.2 arrives on November 3, 2026, in German, French, Spanish, Japanese, Chinese and Korean. A pre-release TestFlight build (iPhone, iPad, Mac) is available on request.",
+      "Version 2.2 is out now on the App Store, in German, French, Spanish, Japanese, Chinese and Korean.",
     zip: "Download everything (.zip, 39 MB)",
     zipFile: "Sapling-Press-Kit.zip",
     appStore: "https://apps.apple.com/us/app/3d-scanner-sapling/id6450019198",
