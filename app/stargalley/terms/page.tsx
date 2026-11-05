@@ -1,11 +1,11 @@
-import WlaPage, { A, List, Section, Sub } from "@/components/wla-page"
+import StarGalleyPage, { A, List, Section, Sub } from "@/components/stargalley-page"
 import { CONTACT_EMAIL } from "@/lib/site"
 
 const mail = `mailto:${CONTACT_EMAIL}`
 
-export default function WlaTermsPage() {
+export default function StarGalleyTermsPage() {
   return (
-    <WlaPage
+    <StarGalleyPage
       title="Terms of"
       accent="Use"
       subtitle={
@@ -17,7 +17,7 @@ export default function WlaTermsPage() {
       <section className="space-y-4">
         <p>
           These terms are an agreement between you and Cephalopod Studio LLC (“Cephalopod Studio”, “we”, “us”)
-          for the iOS app Weight Loss Adventures (the “App”). By downloading or using the App you agree to them. If you
+          for the iOS app Star Galley (the “App”). By downloading or using the App you agree to them. If you
           do not agree, do not use the App.
         </p>
         <p>
@@ -26,7 +26,7 @@ export default function WlaTermsPage() {
             Licensed Application End User License Agreement
           </A>{" "}
           (the “Apple EULA”). Where the two conflict, these terms apply, to the extent the Apple EULA allows. Our{" "}
-          <A href="/wla/privacy">Privacy Policy</A> explains how we handle your information.
+          <A href="/stargalley/privacy">Privacy Policy</A> explains how we handle your information.
         </p>
       </section>
 
@@ -234,6 +234,6 @@ export default function WlaTermsPage() {
           78731-4298, United States
         </p>
       </Section>
-    </WlaPage>
+    </StarGalleyPage>
   )
 }

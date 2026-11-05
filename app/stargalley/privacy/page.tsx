@@ -1,11 +1,11 @@
-import WlaPage, { A, List, Section, Sub } from "@/components/wla-page"
+import StarGalleyPage, { A, List, Section, Sub } from "@/components/stargalley-page"
 import { CONTACT_EMAIL } from "@/lib/site"
 
 const mail = `mailto:${CONTACT_EMAIL}`
 
-export default function WlaPrivacyPage() {
+export default function StarGalleyPrivacyPage() {
   return (
-    <WlaPage
+    <StarGalleyPage
       title="Privacy"
       accent="Policy"
       subtitle={
@@ -16,7 +16,7 @@ export default function WlaPrivacyPage() {
     >
       <section className="space-y-4">
         <p>
-          This policy explains how the iOS app Weight Loss Adventures (it appears as “Adventures” on your Home Screen)
+          This policy explains how the iOS app Star Galley (listed on the App Store as “Star Galley: Calorie Quest”)
           handles your information. The app is made by Cephalopod Studio LLC (“Cephalopod Studio”), which is the
           controller of the personal information described here. “We” and “us” mean Cephalopod Studio.
         </p>
@@ -344,7 +344,7 @@ export default function WlaPrivacyPage() {
       <Section title="Children">
         <p>
           The app is not directed to children under 13, and you must be at least 13 to create an account. If you are
-          under the age of majority where you live, a parent or guardian must agree to our <A href="/wla/terms">Terms of Use</A> for you. If we learn that we
+          under the age of majority where you live, a parent or guardian must agree to our <A href="/stargalley/terms">Terms of Use</A> for you. If we learn that we
           have collected personal information from a child under 13, we will delete it. If you think that has happened,
           email <A href={mail}>{CONTACT_EMAIL}</A>.
         </p>
@@ -369,6 +369,6 @@ export default function WlaPrivacyPage() {
           Cephalopod Studio LLC · <A href={mail}>{CONTACT_EMAIL}</A>
         </p>
       </Section>
-    </WlaPage>
+    </StarGalleyPage>
   )
 }
