@@ -1,32 +1,32 @@
 import Link from "next/link"
 import { ArrowDown, ArrowUp, ArrowUpRight, Dices, Gift, HeartPulse, Users } from "lucide-react"
 import MemphisShape from "@/components/memphis-shape"
-import WlaSignup from "@/components/wla-signup"
+import StarGalleySignup from "@/components/stargalley-signup"
 import { CONTACT_EMAIL } from "@/lib/site"
-import { WLA_APP_STORE_URL, WLA_NAME, WLA_PAGES, WLA_PITCH, WLA_PRICE_MONTH, WLA_PRICE_YEAR, WLA_TRIAL } from "@/lib/wla"
+import { SG_APP_STORE_URL, SG_NAME, SG_PAGES, SG_PITCH, SG_TAGLINE, SG_PRICE_MONTH, SG_PRICE_YEAR, SG_TRIAL } from "@/lib/stargalley"
 
-const LIVE = WLA_APP_STORE_URL !== "" && WLA_APP_STORE_URL !== "#"
+const LIVE = SG_APP_STORE_URL !== "" && SG_APP_STORE_URL !== "#"
 
 const beats = [
   {
     n: "1",
     title: "Log your meals",
     body: "Fast, private, no judgment. Tap a suggestion or search a food and you’re done. Everything stays on your iPhone.",
-    img: "/wla/log.jpg",
+    img: "/stargalley/log.jpg",
     alt: "The Log screen showing 1,437 calories left today, two logged breakfast items, and a Done for Today button.",
   },
   {
     n: "2",
     title: "Check in each day",
     body: "Your daily check-in unlocks your dice. Show up, and the whole crew’s roll gets stronger.",
-    img: "/wla/today.jpg",
+    img: "/stargalley/today.jpg",
     alt: "A Hull Mite encounter card, 15 to beat, with the robot Plic asking if you are ready to throw your dice.",
   },
   {
     n: "3",
     title: "Roll with your crew",
     body: "Take a squad space expedition together: catalogue creatures, chart regions and face the boss.",
-    img: "/wla/reveal.jpg",
+    img: "/stargalley/reveal.jpg",
     alt: "The squad dice roll: four crewmates’ dice add up to 29, against 15 needed.",
   },
 ]
@@ -40,7 +40,7 @@ const promises = [
 
 const premium = ["No ads", "Snap a photo to log a meal", "Describe meals in plain words", "Macros", "Insights"]
 
-export default function WlaHomePage() {
+export default function StarGalleyHomePage() {
   return (
     <div className="pt-28 pb-20 relative overflow-hidden min-h-screen">
       <div className="fixed -z-10 top-40 left-10 w-32 h-32 opacity-20" aria-hidden="true">
@@ -58,17 +58,18 @@ export default function WlaHomePage() {
         <section className="grid md:grid-cols-2 gap-10 md:gap-8 items-center max-w-5xl mx-auto">
           <div className="text-center md:text-left">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Weight Loss <span className="text-accent">Adventures</span>
+              Star <span className="text-accent">Galley</span>
             </h1>
-            <p className="text-xl md:text-2xl text-foreground mb-4">{WLA_PITCH}</p>
+            <p className="text-xl md:text-2xl text-foreground mb-4">{SG_PITCH}</p>
+            <p className="text-lg font-semibold text-secondary mb-4">{SG_TAGLINE}</p>
             <p className="text-lg text-muted-foreground">
               Log meals privately on your iPhone, check in each day, and roll dice with your squad on a space expedition.
             </p>
             <div className="mt-8 flex flex-col items-center md:items-start gap-3">
               {LIVE ? (
                 <a
-                  href={WLA_APP_STORE_URL}
-                  aria-label={`Download ${WLA_NAME} on the App Store`}
+                  href={SG_APP_STORE_URL}
+                  aria-label={`Download ${SG_NAME} on the App Store`}
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   Download on the App Store <ArrowUpRight size={18} aria-hidden="true" />
@@ -85,7 +86,7 @@ export default function WlaHomePage() {
             </div>
           </div>
           <div className="flex justify-center">
-            <Phone src="/wla/exp.jpg" alt="The expedition map: the Pale Drift, a nebula ringed by unexplored systems around a glowing core, with an Explore button." priority className="w-60 md:w-72" />
+            <Phone src="/stargalley/exp.jpg" alt="The expedition map: the Pale Drift, a nebula ringed by unexplored systems around a glowing core, with an Explore button." priority className="w-60 md:w-72" />
           </div>
         </section>
 
@@ -161,13 +162,13 @@ export default function WlaHomePage() {
               ))}
             </ul>
             <p className="text-2xl font-bold text-foreground">
-              {WLA_PRICE_MONTH}/month <span className="text-muted-foreground font-normal">or</span> {WLA_PRICE_YEAR}/year
+              {SG_PRICE_MONTH}/month <span className="text-muted-foreground font-normal">or</span> {SG_PRICE_YEAR}/year
             </p>
-            <p className="mt-2 text-lg text-foreground">Start with a {WLA_TRIAL}.</p>
+            <p className="mt-2 text-lg text-foreground">Start with a {SG_TRIAL}.</p>
             <p className="mt-4 text-sm text-muted-foreground">
               Prices may vary by region. Cancel anytime in your Apple ID settings. The free trial converts to a paid
               subscription unless you cancel at least 24 hours before it ends. See the{" "}
-              <Link href="/wla/terms" className="text-secondary underline underline-offset-2">
+              <Link href="/stargalley/terms" className="text-secondary underline underline-offset-2">
                 Terms of Use
               </Link>
               .
@@ -181,9 +182,9 @@ export default function WlaHomePage() {
             <h2 id="notify-h" className="text-3xl md:text-4xl font-bold mb-3">
               Get notified at <span className="text-secondary">launch</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">Weight Loss Adventures is coming to the App Store. Leave your email and we&rsquo;ll tell you the day it lands.</p>
+            <p className="text-lg text-muted-foreground mb-8">Star Galley is coming to the App Store. Leave your email and we&rsquo;ll tell you the day it lands.</p>
             <div className="content-overlay rounded-lg p-6 md:p-10">
-              <WlaSignup idPrefix="signup" />
+              <StarGalleySignup idPrefix="signup" />
             </div>
           </section>
         )}
@@ -195,7 +196,7 @@ export default function WlaHomePage() {
           </h2>
           <p className="text-lg text-muted-foreground mb-6">One card a day, one roll together. Show up, and the ship moves.</p>
           {LIVE ? (
-            <a href={WLA_APP_STORE_URL} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+            <a href={SG_APP_STORE_URL} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
               Download on the App Store <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           ) : (
@@ -207,8 +208,8 @@ export default function WlaHomePage() {
 
         {/* Footer links */}
         <footer className="max-w-3xl mx-auto text-center">
-          <nav aria-label="Weight Loss Adventures" className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {WLA_PAGES.map((page) => (
+          <nav aria-label="Star Galley" className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {SG_PAGES.map((page) => (
               <Link key={page.href} href={page.href} className="text-secondary underline underline-offset-2">
                 {page.label}
               </Link>
@@ -218,7 +219,7 @@ export default function WlaHomePage() {
             Questions? <a href={`mailto:${CONTACT_EMAIL}`} className="text-secondary underline underline-offset-2">{CONTACT_EMAIL}</a>
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            Weight Loss Adventures is made by Cephalopod Studio LLC. Not medical advice.
+            Star Galley is made by Cephalopod Studio LLC. Not medical advice.
           </p>
         </footer>
       </div>

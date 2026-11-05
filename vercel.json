@@ -8,12 +8,52 @@
   "redirects": [
     {
       "source": "/uneaten",
-      "destination": "/wla/privacy/",
+      "destination": "/stargalley/privacy/",
       "permanent": true
     },
     {
       "source": "/uneaten/",
-      "destination": "/wla/privacy/",
+      "destination": "/stargalley/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/wla",
+      "destination": "/stargalley/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/",
+      "destination": "/stargalley/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/privacy",
+      "destination": "/stargalley/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/privacy/",
+      "destination": "/stargalley/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/terms",
+      "destination": "/stargalley/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/terms/",
+      "destination": "/stargalley/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/support",
+      "destination": "/stargalley/support/",
+      "permanent": true
+    },
+    {
+      "source": "/wla/support/",
+      "destination": "/stargalley/support/",
       "permanent": true
     }
   ]

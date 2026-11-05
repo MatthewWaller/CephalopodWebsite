@@ -1,8 +1,8 @@
 import type React from "react"
-import WlaPage, { A, Section } from "@/components/wla-page"
+import StarGalleyPage, { A, Section } from "@/components/stargalley-page"
 import { CONTACT_EMAIL } from "@/lib/site"
 
-const mail = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Weight Loss Adventures support")}`
+const mail = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Star Galley support")}`
 
 function Faq({ question, children }: { question: string; children: React.ReactNode }) {
   return (
@@ -18,9 +18,9 @@ function Faq({ question, children }: { question: string; children: React.ReactNo
   )
 }
 
-export default function WlaSupportPage() {
+export default function StarGalleySupportPage() {
   return (
-    <WlaPage title="Help &" accent="Support" subtitle="Questions, problems or feedback: we read every message.">
+    <StarGalleyPage title="Help &" accent="Support" subtitle="Questions, problems or feedback: we read every message.">
       <Section title="Contact us">
         <p>
           Email <A href={mail}>{CONTACT_EMAIL}</A>. The quickest way is from the app: Settings › About › Contact Us
@@ -42,7 +42,7 @@ export default function WlaSupportPage() {
         <Faq question="How do I cancel my subscription?">
           <p>
             Apple manages subscriptions. In the app, go to Settings › Premium › Manage Subscription, or on your iPhone
-            open Settings › your name › Subscriptions › Weight Loss Adventures and tap Cancel Subscription. Cancel at
+            open Settings › your name › Subscriptions › Star Galley and tap Cancel Subscription. Cancel at
             least 24 hours before the renewal date to avoid being charged for the next period. You keep Premium until
             the end of the period you paid for.
           </p>
@@ -117,7 +117,7 @@ export default function WlaSupportPage() {
         <Faq question="How do I turn Apple Health on or off?">
           <p>
             The app asks for permission the first time you open Progress. To change it later, open the Health app, tap
-            your profile picture, then Apps › Adventures. You can also go to Settings in the app › Health, which links
+            your profile picture, then Apps › Star Galley. You can also go to Settings in the app › Health, which links
             straight there.
           </p>
           <p>
@@ -130,7 +130,7 @@ export default function WlaSupportPage() {
         </Faq>
         <Faq question="My weigh-ins or meals aren’t showing up in Health.">
           <p>
-            Check that writing is allowed for Weight and the nutrition types in the Health app (Apps › Adventures). The
+            Check that writing is allowed for Weight and the nutrition types in the Health app (Apps › Star Galley). The
             app only writes entries you make after access is granted.
           </p>
         </Faq>
@@ -152,9 +152,9 @@ export default function WlaSupportPage() {
 
       <section className="space-y-4">
         <p>
-          Read the <A href="/wla/privacy">Privacy Policy</A> and the <A href="/wla/terms">Terms of Use</A>.
+          Read the <A href="/stargalley/privacy">Privacy Policy</A> and the <A href="/stargalley/terms">Terms of Use</A>.
         </p>
       </section>
-    </WlaPage>
+    </StarGalleyPage>
   )
 }

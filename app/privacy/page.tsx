@@ -27,8 +27,8 @@ export default function PrivacyPage() {
           </h1>
           <p className="text-lg text-muted-foreground">Last updated September 24, 2026</p>
           <p className="mt-4 text-lg text-muted-foreground">
-            Using Weight Loss Adventures?{" "}
-            <Link href="/wla/privacy" className="text-secondary underline underline-offset-2">
+            Using Star Galley?{" "}
+            <Link href="/stargalley/privacy" className="text-secondary underline underline-offset-2">
               See its privacy policy.
             </Link>
           </p>

@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react"
 import Link from "next/link"
-import { WLA_NAME } from "@/lib/wla"
+import { SG_NAME } from "@/lib/stargalley"
 
 // Interest signup. The site is a static export with no backend, so the form
 // posts to FormSubmit's AJAX endpoint, which emails each submission to
@@ -13,7 +13,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 type Status = "idle" | "sending" | "success" | "error"
 
-export default function WlaSignup({ idPrefix = "signup" }: { idPrefix?: string }) {
+export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: string }) {
   const uid = useId()
   const emailId = `${idPrefix}-${uid}-email`
   const nameId = `${idPrefix}-${uid}-name`
@@ -48,7 +48,7 @@ export default function WlaSignup({ idPrefix = "signup" }: { idPrefix?: string }
         body: JSON.stringify({
           email: trimmed,
           name: name.trim(),
-          _subject: `${WLA_NAME}: launch interest`,
+          _subject: `${SG_NAME}: launch interest`,
           _template: "table",
           _honey: "",
         }),
@@ -117,7 +117,7 @@ export default function WlaSignup({ idPrefix = "signup" }: { idPrefix?: string }
       </form>
       <p className="text-sm text-muted-foreground">
         We&rsquo;ll email you once when it launches. No spam, unsubscribe anytime.{" "}
-        <Link href="/wla/privacy" className="text-secondary underline underline-offset-2">
+        <Link href="/stargalley/privacy" className="text-secondary underline underline-offset-2">
           Privacy
         </Link>
       </p>

@@ -5,12 +5,12 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import MemphisShape from "@/components/memphis-shape"
-import { WLA_NAME, WLA_PAGES } from "@/lib/wla"
+import { SG_NAME, SG_PAGES } from "@/lib/stargalley"
 
-// Shared shell for the Weight Loss Adventures pages: the same layout as
+// Shared shell for the Star Galley pages: the same layout as
 // /privacy (Memphis shapes, centered heading, content-overlay card), plus a
 // row linking the sibling pages.
-export default function WlaPage({
+export default function StarGalleyPage({
   title,
   accent,
   subtitle,
@@ -39,8 +39,8 @@ export default function WlaPage({
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <Link href="/wla" className="inline-block mb-4 text-secondary font-medium hover:text-secondary/80 transition-colors">
-            {WLA_NAME}
+          <Link href="/stargalley" className="inline-block mb-4 text-secondary font-medium hover:text-secondary/80 transition-colors">
+            {SG_NAME}
           </Link>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             {title} <span className="text-accent">{accent}</span>
@@ -58,7 +58,7 @@ export default function WlaPage({
         </motion.div>
 
         <nav className="max-w-3xl mx-auto mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3">
-          {WLA_PAGES.filter((page) => !pathname?.startsWith(page.href)).map((page) => (
+          {SG_PAGES.filter((page) => !pathname?.startsWith(page.href)).map((page) => (
             <Link key={page.href} href={page.href} className="text-secondary underline underline-offset-2">
               {page.label}
             </Link>
