@@ -21,6 +21,7 @@ const apps: Omit<Project, "color">[] = [
   { title: "Director's Cut", icon: "/assets/directorscut_icon.png", href: "/projects/directorscut" },
   { title: "RunPal", icon: "/assets/runpal_icon.png", href: "/projects/runpal" },
   { title: "Fab3D", icon: "/assets/fab3d_icon.png", href: "/projects/fab3d" },
+  { title: "Weight Loss Adventures", shortTitle: "Adventures", icon: "/assets/wla_icon.png", href: "/wla" },
 ]
 
 export const projects: Project[] = apps.map((app, i) => ({
@@ -36,6 +37,7 @@ const featuredOrder = [
   "/projects/journal-diary-rambler",
   "/projects/3d-scanner-sapling",
   "/projects/passage",
+  "/wla",
 ]
 
 export const featuredProjects: Project[] = featuredOrder.map(
