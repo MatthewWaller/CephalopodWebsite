@@ -288,9 +288,8 @@ export default function StarGalleyPrivacyPage() {
           </li>
           <li>Analytics data is kept for 2 months.</li>
           <li>
-            If you sign up on our website to hear when the app launches, your email address (and first name, if you
-            give it) is sent to us by email through FormSubmit. We use it only to tell you about the launch and delete
-            it when you ask.
+            If you sign up on our website to hear when the app launches, your email address is stored in a Google
+            Form that only we can see. We use it only to tell you about the launch and delete it when you ask.
           </li>
         </List>
       </Section>
