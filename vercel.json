@@ -4,5 +4,17 @@
     "deploymentEnabled": {
       "main": false
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/uneaten",
+      "destination": "/wla/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/uneaten/",
+      "destination": "/wla/privacy/",
+      "permanent": true
+    }
+  ]
 }
