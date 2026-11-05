@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["QBL739225X.com.Cephalopod.Uneaten"],
+        "components": [
+          { "/": "/stargalley/join", "comment": "Star Galley squad invites" },
+          { "/": "/stargalley/join/*", "comment": "Star Galley squad invites" }
+        ]
+      }
+    ]
+  }
+}
