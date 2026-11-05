@@ -2,13 +2,15 @@
 
 import { useId, useState } from "react"
 import Link from "next/link"
-import { SG_NAME } from "@/lib/stargalley"
 
 // Interest signup. The site is a static export with no backend, so the form
-// posts to FormSubmit's AJAX endpoint, which emails each submission to
-// hello@cephalopod.studio. (The first submission ever sends an activation
-// email to that address; it must be confirmed once.)
-const ENDPOINT = "https://formsubmit.co/ajax/hello@cephalopod.studio"
+// submits straight into a Google Form ("Star Galley Launch!"); responses land
+// in the form's sheet and Google emails a notice for each one. Google doesn't
+// allow cross-origin reads of the response (no-cors), so a sent request is
+// treated as success.
+const FORM_ID = "1FAIpQLScF93l6LbqAzXbmq9dv-KDamStzZC1dXyz8AsYIafXM9GaJKQ"
+const ENDPOINT = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`
+const EMAIL_ENTRY = "entry.107305515"
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 type Status = "idle" | "sending" | "success" | "error"
@@ -16,10 +18,8 @@ type Status = "idle" | "sending" | "success" | "error"
 export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: string }) {
   const uid = useId()
   const emailId = `${idPrefix}-${uid}-email`
-  const nameId = `${idPrefix}-${uid}-name`
   const msgId = `${idPrefix}-${uid}-msg`
   const [email, setEmail] = useState("")
-  const [name, setName] = useState("")
   const [status, setStatus] = useState<Status>("idle")
   const [message, setMessage] = useState("")
 
@@ -28,7 +28,7 @@ export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: s
     if (status === "sending") return
     const form = new FormData(e.currentTarget)
     // Honeypot: a filled hidden field means a bot. Pretend it worked.
-    if (form.get("_honey")) {
+    if (form.get("website")) {
       setStatus("success")
       setMessage("You're on the list.")
       return
@@ -42,23 +42,14 @@ export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: s
     setStatus("sending")
     setMessage("")
     try {
-      const res = await fetch(ENDPOINT, {
+      await fetch(ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          email: trimmed,
-          name: name.trim(),
-          _subject: `${SG_NAME}: launch interest`,
-          _template: "table",
-          _honey: "",
-        }),
+        mode: "no-cors",
+        body: new URLSearchParams({ [EMAIL_ENTRY]: trimmed }),
       })
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok || String(data?.success) === "false") throw new Error("failed")
       setStatus("success")
       setMessage("You're on the list. We'll email you once when it launches.")
       setEmail("")
-      setName("")
     } catch {
       setStatus("error")
       setMessage("Something went wrong. Please try again, or email hello@cephalopod.studio.")
@@ -71,12 +62,6 @@ export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: s
   return (
     <div className="w-full max-w-md mx-auto text-left">
       <form onSubmit={onSubmit} noValidate className="space-y-3" aria-describedby={msgId}>
-        <div>
-          <label htmlFor={nameId} className="block text-sm text-muted-foreground mb-1 ml-2">
-            First name (optional)
-          </label>
-          <input id={nameId} name="name" type="text" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} className={inputCls} />
-        </div>
         <div>
           <label htmlFor={emailId} className="block text-sm text-muted-foreground mb-1 ml-2">
             Email
@@ -97,7 +82,7 @@ export default function StarGalleySignup({ idPrefix = "signup" }: { idPrefix?: s
         </div>
         {/* Honeypot, hidden from people and assistive tech. */}
         <div className="hidden" aria-hidden="true">
-          <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </div>
         <button
           type="submit"
