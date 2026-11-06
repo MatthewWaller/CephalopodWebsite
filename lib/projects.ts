@@ -22,6 +22,7 @@ const apps: Omit<Project, "color">[] = [
   { title: "RunPal", icon: "/assets/runpal_icon.png", href: "/projects/runpal" },
   { title: "Fab3D", icon: "/assets/fab3d_icon.png", href: "/projects/fab3d" },
   { title: "Star Galley", shortTitle: "Star Galley", icon: "/assets/wla_icon.png", href: "/stargalley" },
+  { title: "Quarrel: The Far Watch", shortTitle: "Quarrel", icon: "/quarrel/icon.webp", href: "/quarrel", circular: true },
 ]
 
 export const projects: Project[] = apps.map((app, i) => ({
