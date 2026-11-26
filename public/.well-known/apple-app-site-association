@@ -7,6 +7,13 @@
           { "/": "/stargalley/join", "comment": "Star Galley squad invites" },
           { "/": "/stargalley/join/*", "comment": "Star Galley squad invites" }
         ]
+      },
+      {
+        "appIDs": ["QBL739225X.com.Cephalopod.Rambler"],
+        "components": [
+          { "/": "/rambler/journaling-suggestion", "comment": "Rambler: Journaling Suggestions notifications" },
+          { "/": "/rambler/journaling-suggestion/*", "comment": "Rambler: Journaling Suggestions notifications" }
+        ]
       }
     ]
   }
